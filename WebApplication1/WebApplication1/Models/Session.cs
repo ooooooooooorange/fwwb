@@ -33,7 +33,7 @@ namespace WebApplication1.Models
         }
         public String SendPurchase()
         {
-
+            return null;
         }
         public void ReadPurchase(params String[] vs )
         {

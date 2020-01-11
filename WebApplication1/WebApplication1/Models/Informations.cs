@@ -27,14 +27,14 @@ namespace WebApplication1.Models
         private String name { get; set; }
     }
     //工夹具类型，具体类型后期添加
-    enum FixtureType
+    partial class Fixture
     {
 
     }
-    class Fixture
+    partial class Tool
     {
         private String fid { get; set; }
-        private FixtureType type { get; set; }
+        private Fixture type { get; set; }
         private String purchase { get; set; }
         private List<String> unloadings { get; set; }
         private List<String> dam_reps { get; set; }
@@ -49,9 +49,9 @@ namespace WebApplication1.Models
         /// <summary>
         /// 工夹具类别
         /// </summary>
-        protected FixtureType ftype { get; set; }
+        protected Fixture ftype { get; set; }
         /// <summary>
-        /// 工夹具照片，数据库储存路径
+        /// 工夹具照片，//数据库储存路径
         /// </summary>
         protected List<Image> image;
         /// <summary>

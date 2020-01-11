@@ -9,7 +9,7 @@ namespace WebApplication1.Models
 {
     class Sever
     {
-        public void man(User u)
+        /*public void man(User u)
         {
             HttpWebRequest httpWebRequest = WebRequest.Create("http://www.baidu.com") as HttpWebRequest;
 
@@ -46,8 +46,20 @@ namespace WebApplication1.Models
                     Console.WriteLine(message);
                 }
             }
+        }*/
+        /// <summary>
+        /// 用户登录，输入类型，编号及密码
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="pwd"></param>
+        /// <param name="tp"></param>
+        /// <returns>成功返回该用户，失败返回空</returns>
+        public static User Login(String id,String password,string type)
+        {
+            UserType tp= (UserType)Enum.Parse(typeof(UserType), type);
+            return User.Login(id, password, tp);
         }
-    }
-    
+
+    }    
 }
 

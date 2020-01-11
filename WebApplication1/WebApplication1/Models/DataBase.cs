@@ -13,6 +13,7 @@ namespace WebApplication1.Models
 {
     public class DBinfo
     {
+        public const String P = "'";
         public const String DBNAME = "";
         public const String SEVER = "";
         public const String DBUID = "";
@@ -26,15 +27,16 @@ namespace WebApplication1.Models
         /// <param name="table_name">选择的表名</param>
         /// <param name="values">where中的限制条件，由行名及限制条见交替组成，故一定为偶数</param>
         /// <returns></returns>
-        public static String SqlSecelt(String table_name,params String[] values)
+        public static String SqlSelect(String table_name,params String[] values)
         {
             if ((values.Length & 1) == 1)
                 return "";
             String ret = "select * from " + table_name + " where ";
             for(int i = 0; i < values.Length; i += 2)
             {
-                ret += values[i] + " = " + values[i + 1];
+                ret += " "+values[i] + " = " + values[i + 1]+" and ";
             }
+            ret = ret.Remove(ret.Length - 4, 4);
             return ret;
         }
         /// <summary>
@@ -79,8 +81,34 @@ namespace WebApplication1.Models
             String ret = "delete from " + table_name + " where ";
             for (int i = 0; i < values.Length; i += 2)
             {
-                ret += values[i] + " = " + values[i + 1];
+                ret += " "+values[i] + " = " + values[i + 1]+" and ";
             }
+            ret = ret.Remove(ret.Length - 4, 4);
+            return ret;
+        }
+        /// <summary>
+        /// 生成简单SQL更新语句
+        /// </summary>
+        /// <param name="set_col">标识更新的列数</param>
+        /// <param name="table_name">表名</param>
+        /// <param name="values">应为偶数，前2*set_col为更新的列名及数据，后为限制条件</param>
+        /// <returns></returns>
+        public static String SqlUpdate(int set_col,String table_name,params  String[] values)
+        {
+            String ret = "update " + table_name;
+            ret += " set ";
+            int var_col = set_col * 2;
+            for (int i = 0; i < var_col; i+=2)
+            {
+                ret += values[i] + " = " + values[i + 1]+" ,";
+            }
+            ret = ret.Remove(ret.Length - 1, 1);
+            ret += " where";
+            for (int i = var_col; i < values.Length; i+=2)
+            {
+                ret += " " + values[i] + " = " + values[i + 1] + " and ";
+            }
+            ret = ret.Remove(ret.Length - 4, 4);
             return ret;
         }
     } 
@@ -101,7 +129,7 @@ namespace WebApplication1.Models
                 return null;
             User ret =null;            
             using (Connetion con = new Connetion(CONNSTR))                          
-                using (Command com = new Command(SqlSecelt(tb_name, tbcn_uid, uid, tbcn_type, Enum.GetName(typeof(UserType), type)),con))
+                using (Command com = new Command(SqlSelect(tb_name, tbcn_uid, P+uid+P, tbcn_type, P+Enum.GetName(typeof(UserType), type)+P),con))
                 {
                 con.Open();                
                 DataReader rd = com.ExecuteReader();
@@ -132,19 +160,159 @@ namespace WebApplication1.Models
                 return false;
             using(Connetion con=new Connetion(CONNSTR))
                 //暂定插入顺序为用户编号，用户ID，用户名，用户密码，用户类型
-                using(Command com=new Command(SqlInsertLine(0, tb_name, uid, name, password, Enum.GetName(typeof(UserType), type))))
+                using(Command com=new Command(SqlInsertLine(0, tb_name, P+uid+P, P+name+P, P+password+P, P+Enum.GetName(typeof(UserType), type)+P)))
             {
                 return com.ExecuteNonQuery()>0;
             }
         }
         /// <summary>
         /// 删除员工
-        /// TODO:暂时貌似不需要，不紧急，以后再说
+        /// TODO:不紧急，再说
         /// </summary>
         /// <returns></returns>
         public Boolean Delete()
         {
             return false;
+        }
+    }
+    partial class Tool
+    {
+        /*ID	WorkcellID	Workcell	FamilyID	Family	Code	Name	Model	PartNo	
+         * UsedFor	UPL	Owner	OwnerName	Remark	PMPeriod	RecOn	RecBy	RecByName	EditOn	EditBy	EditByName
+         */
+        private const String tb_name = "";//数据库中的表名
+        /// <summary>
+        /// 通过若干条件，查找并返回对应工夹具信息列表
+        /// </summary>
+        /// <param name="vars">诺干列名，数值</param>
+        /// <returns></returns>
+        static public List<Tool> Select(params string[] vars)
+        {
+            if ((vars.Length & 1) == 1)
+                return null;
+            List<Tool> ret = new List<Tool>();
+            string sql = SqlSelect(tb_name, vars);
+            using (Connetion con = new Connetion(CONNSTR))
+            using (Command com = new Command(sql))
+            {
+                con.Open();
+                DataReader rd = com.ExecuteReader();
+                while (rd.Read())
+                {
+                    ret.Add(new Tool
+                    {
+                        //TODO:在此添加相应的工夹具信息，似乎还有些问题
+                    });
+                }
+            }
+            return ret;
+        }
+        public Boolean Insert()
+        {
+            return false;
+        }
+        public Boolean Delete()
+        {
+            return false;
+        }
+        public Boolean Update()
+        {
+            return false;
+        }
+    }
+    abstract partial class ReqInfo
+    {
+        abstract public Boolean Select();
+        abstract public Boolean Insert();
+        abstract public Boolean Delete();
+        abstract public Boolean Update();
+    }
+    partial class ImExReq : ReqInfo
+    {
+        public override bool Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Insert()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Select()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Update()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    partial class PurchaseReq : ReqInfo
+    {
+        public override bool Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Insert()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Select()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Update()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    partial class RepairReq : ReqInfo
+    {
+        public override bool Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Insert()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Select()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Update()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    partial class ScrapReq : ReqInfo
+    {
+        public override bool Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Insert()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Select()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Update()
+        {
+            throw new NotImplementedException();
         }
     }
 }
