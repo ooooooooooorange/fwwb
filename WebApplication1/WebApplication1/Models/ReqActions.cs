@@ -1,9 +1,5 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
@@ -30,6 +26,11 @@ namespace WebApplication1.Models
         /// </summary>
         /// <param name="actor">操作人员编号</param>
         abstract public void Refuse(String actor);
+        /// <summary>
+        /// 创建相应请求
+        /// </summary>
+        /// <returns></returns>
+        abstract public bool Creat(String actor);
         /// <summary>
         /// 用字符串构造实体,通过字符串进行传参，对接webget方法
         /// </summary>
@@ -84,6 +85,10 @@ namespace WebApplication1.Models
             throw new NotImplementedException();
         }
 
+        public override bool Creat(String actor)
+        {
+            throw new NotImplementedException();
+        }
     }
     /// <summary>
     /// --进出库流程表单--
@@ -118,6 +123,11 @@ namespace WebApplication1.Models
         }
 
         public override void Refuse(string actor)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Creat(String actor)
         {
             throw new NotImplementedException();
         }
@@ -169,6 +179,10 @@ namespace WebApplication1.Models
             throw new NotImplementedException();
         }
 
+        public override bool Creat(String actor)
+        {
+            throw new NotImplementedException();
+        }
     }
     /// <summary>
     /// --报废申请单--
@@ -193,6 +207,11 @@ namespace WebApplication1.Models
 
         }
         public override void Access(string actor)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Creat(String actor)
         {
             throw new NotImplementedException();
         }

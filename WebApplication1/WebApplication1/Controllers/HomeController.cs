@@ -26,5 +26,27 @@ namespace WebApplication1.Controllers
             
             return View();
         }
+        public ActionResult VView()
+        {
+
+            ViewBag.Message = "main";
+
+            if (ViewBag.Password == "")
+                return Contact();
+            return View();
+        }
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Login";
+            return View();
+        }
+        public ActionResult Test()
+        {
+            ViewBag.Message = "Login";
+            
+            if(ViewBag.Password == null)
+                return Redirect("/Home/Index");
+            return Redirect("/Home/VView");
+        }
     }
 }

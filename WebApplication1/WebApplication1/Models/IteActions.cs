@@ -36,6 +36,22 @@ namespace WebApplication1.Models
                 return ret;
             else return null;
         }
-        //public 
+        /// <summary>
+        /// 创建新的请求
+        /// </summary>
+        /// <param name="req">根据传入请求类型，调用相应创建函数</param>
+        /// <returns>返回记录后的请求，失败则为null</returns>
+        public ReqInfo NewReq(ReqInfo req)
+        {
+            //TODO:处理该请求
+            req.Creat(uid);
+            return req;
+        }
+        public ReqInfo AccessReq(ReqInfo req)
+        {
+
+            return req;
+        }
     }
 }
+
