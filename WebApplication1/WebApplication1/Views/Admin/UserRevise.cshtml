@@ -1,0 +1,279 @@
+﻿
+@{
+    ViewBag.Title = "UserRevise";//添加和删除用户
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
+    <title>捷普科技 &mdash; 工夹具管理系统</title>
+
+    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../dist/css/demo.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+
+                <ul class="navbar-nav navbar-right">
+                    <a style="color: whitesmoke ;height:10px;
+	font-size:15px;">用户增删</a>
+
+                    <li class="text_head">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+                            <i class="ion ion-android-person d-lg-none"></i>
+                            <div class="" id="greet">Hi, 李真</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="profile.html" class="dropdown-item has-icon">
+                                <i class="ion ion-android-person"></i> 个人
+                            </a>
+                            <a href=" login.html" class="dropdown-item has-icon">
+                                <i class="ion ion-log-out"></i> 退出
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+
+            </nav>
+
+
+            <div class="main-sidebar">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="index02.html">JABIL 捷普科技</a>
+                    </div>
+                    <div class="sidebar-user">
+                        <div class="sidebar-user-picture">
+                            <img alt="image" src="../dist/img/avatar/07.jpg" id="user_img">
+                        </div>
+                        <div class="sidebar-user-details">
+                            <div class="user-name" id="username">李真</div>
+                            <div class="user-role" id="role">
+                                系统管理员
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Welcome</li>
+                        <li class="active">
+                            <a href="index05.html"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
+                        </li>
+                        <li class="menu-header">FUNCTION</li>
+                        <li>
+                            <a href="user_revise.html"><i class="ion ion-clipboard"></i><span>添加/删除用户</span></a>
+                        </li>
+                        <li>
+                            <a href="user_power.html"><i class="ion ion-clipboard"></i><span>更改用户权限</span></a>
+                        </li>
+
+                    </ul>
+                </aside>
+            </div>
+
+
+
+
+            <p class="text5">用户列表</p>
+            <p class="contenter1">>- - - - - - - - - - - -</p>
+            <button class="btn05" data-toggle="modal" data-target="#myModal">
+                添加新用户
+            </button>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width:80%">
+                        <div class="modal-header">
+                            <p class="modal-title" style="font-size: 20px ;color:darkslateblue" id="myModalLabel">
+                                添加新用户信息(按Esc退出）
+                            </p>
+                        </div>
+                        <script>
+            function onclk7()
+            {
+
+              if(isNaN(document.getElementById("username").value) && isNaN(document.getElementById("password").value) )
+
+              {
+                alert("用户信息添加成功");
+              }
+              else
+              {
+                alert("请填写完整用户信息")
+              }
+
+            }
+                        </script>
+                        <form class="modal-body">
+                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82">用户名</p>
+                            <input class="" id="username_new" name="username_new" style=";margin-left: 20px;width:90%">
+                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82; margin-top: 8px">密码(不能为纯数字)</p>
+                            <input class="" id="password" name="password" style="margin-left: 20px;width:90%">
+                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;margin-top: 15px">用户类别</p>
+                            <div class="radio" style="font-size: 18px;margin-left:40px">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 初级用户
+                                </label>
+                            </div>
+                            <div class="radio" style="font-size: 18px;margin-left:40px">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">高级用户
+                                </label>
+                            </div>
+                            <div class="radio" style="font-size: 18px;margin-left:40px">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> 监管员
+                                </label>
+                            </div>
+                            <div class="radio" style="font-size: 18px;margin-left:40px">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4"> 经理
+                                </label>
+                            </div>
+                            <div class="radio" style="font-size: 18px;margin-left:40px">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5"> 系统管理员
+                                </label>
+                            </div>
+                        </form>
+                        <div class="modal-footer">
+                            <button type="submit" onclick="onclk7()" class="btn-apply" style="color: darkslateblue">
+                                添加新用户
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+      function ondelete()
+      {
+        document.getElementById("role1").textContent="";
+        document.getElementById("user1").textContent="";
+        document.getElementById("password1").textContent=""
+        ocument.getElementById("delete").textContent=""
+      }
+
+            </script>
+
+            <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 28%">
+                <thead>
+                    <tr>
+                        <th>用户类型</th>
+                        <th>用户名</th>
+                        <th>密码</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td id="role1">初级用户</td>
+                        <td id="user1">张三</td>
+                        <td id="password1">zhangsan1123</td>
+                        <td id="delete"> <a href="#" style=" color:red " onclick="ondelete()">删除 </a></td>
+
+                    </tr>
+
+                    <tr>
+                        <td id="role2">高级用户</td>
+                        <td id="user2">李四</td>
+                        <td id="password2">lisi123</td>
+                        <td> <a href="#" style=" color:red ">删除 </a></td>
+                    </tr>
+
+                    <tr>
+                        <td id="role3">监管员</td>
+                        <td id="user3">童雪</td>
+                        <td id="password3">tongxue123</td>
+                        <td> <a href="#" style=" color:red ">删除 </a></td>
+                    </tr>
+                    <tr>
+                        <td id="role4">经理</td>
+                        <td id="user4">孙娜恩</td>
+                        <td id="password4">sunnaen123</td>
+                        <td> <a href="#" style=" color:red ">删除 </a></td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="../dist/modules/jquery.min.js"></script>
+    <script src="../dist/modules/popper.js"></script>
+    <script src="../dist/modules/tooltip.js"></script>
+    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../dist/js/sa-functions.js"></script>
+
+    <script src="../dist/modules/chart.min.js"></script>
+    <script src="../dist/modules/summernote/summernote-lite.js"></script>
+
+    <script>
+  var ctx = document.getElementById("myChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      datasets: [{
+        label: 'Statistics',
+        data: [460, 458, 330, 502, 430, 610, 488],
+        borderWidth: 2,
+        backgroundColor: 'rgb(87,75,144)',
+        borderColor: 'rgb(87,75,144)',
+        borderWidth: 2.5,
+        pointBackgroundColor: '#ffffff',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            stepSize: 150
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
+      },
+    }
+  });
+    </script>
+    <script src="../dist/js/scripts.js"></script>
+    <script src="../dist/js/custom.js"></script>
+    <script src="../dist/js/demo.js"></script>
+</body>
+</html>

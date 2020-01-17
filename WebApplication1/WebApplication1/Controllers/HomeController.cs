@@ -43,8 +43,8 @@ namespace WebApplication1.Controllers
         public ActionResult Test()
         {
             ViewBag.Message = "Login";
-            
-            if(ViewBag.Password == null)
+            //Models.User.Login(...);
+            if (ViewBag.Password == null)
                 return Redirect("/Home/Index");
             return Redirect("/Home/VView");
         }

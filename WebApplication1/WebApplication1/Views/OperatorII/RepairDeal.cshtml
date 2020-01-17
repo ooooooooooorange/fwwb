@@ -1,0 +1,298 @@
+﻿
+@{
+    ViewBag.Title = "RepairDeal";//报修申请处理
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
+    <title>捷普科技 &mdash; 工夹具管理系统</title>
+
+    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../dist/css/demo.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+
+                <ul class="navbar-nav navbar-right">
+                    <a style="color: whitesmoke ;height:10px;
+	font-size:15px;">报修申请</a>
+
+                    <li class="text_head">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+                            <i class="ion ion-android-person d-lg-none"></i>
+                            <div class="" id="greet">Hi, 李四</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="profile.html" class="dropdown-item has-icon">
+                                <i class="ion ion-android-person"></i> 个人
+                            </a>
+                            <a href=" login.html" class="dropdown-item has-icon">
+                                <i class="ion ion-log-out"></i> 退出
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+
+            </nav>
+
+
+            <div class="main-sidebar">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="index02.html">JABIL 捷普科技</a>
+                    </div>
+                    <div class="sidebar-user">
+                        <div class="sidebar-user-picture">
+                            <img alt="image" src="../dist/img/avatar/avatar-2.jpeg" id="user_img">
+                        </div>
+                        <div class="sidebar-user-details">
+                            <div class="user-name" id="username">李四</div>
+                            <div class="user-role" id="role">
+                                高级用户
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Welcome</li>
+                        <li class="active">
+                            <a href="index02.html"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
+                        </li>
+                        <li class="menu-header">FUNCTION</li>
+                        <li>
+                            <a href="bought_ask.html"><i class="ion ion-flag"></i><span>采购入库</span></a>
+                        </li>
+                        <li>
+                            <a href="repair_deal.html"><i class="ion ion-clipboard"></i><span>报修申请</span></a>
+                        </li>
+                        <li>
+                            <a href="scrap_ask.html"><i class="ion ion-clipboard"></i><span>报废申请</span></a>
+                        </li>
+                        <li>
+                            <a href="tool_information.html"><i class="ion ion-ios-copy-outline"></i><span>工夹具基础信息</span></a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+
+
+
+            <p class="text5">报修申请列表</p>
+            <p class="contenter1">>- - - - - - - - - - </p>
+
+
+            <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 25%">
+                <thead>
+                    <tr>
+                        <th>申请人</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+
+                        <td id="applicator">吴亦凡</td>
+                        <script>
+          function ondate()
+          {
+            document.getElementById("applicator").textContent=""
+            document.getElementById("manage").textContent=""
+          }
+
+                        </script>
+
+
+
+                        <td id="manage">
+                            <a href="#" data-toggle="modal" data-target="#Modal" style="color:#0087cb">查看</a>
+                            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width:100%">
+                                        <div class="modal-header">
+                                            <p class="modal-title" style="font-size: 20px ;color:darkslateblue" id="ModalLabel">
+                                                采购入库信息
+                                            </p>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82; width:85%;background-color:lavender">申请人</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;" id="applyname">徐明浩</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; margin-top: 8px;background-color:lavender">类别代码</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;" id="class_coode">BFC SQ 2218</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">物品代码</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82" id="tool_coode">LM2132-3</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">采购入库单号</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82" id="doc_num">JB0-3216</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">采购入库日期</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82" id="data">2019/1/26</p>
+                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">物品照片</p>
+                                            <img src='../dist/img/avatar/08.png' style="font-size:18px ;margin-left: 20px;color: #4b3f82;;width:70%" id="inputfile1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#Modal2" style="color:mediumseagreen">同意</a>
+                            <a href="#" style=" color:red " onclick="ondate()">删除 </a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>吴世勋</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>鹿晗</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>朴灿烈</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张艺兴</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>艾琳</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>朴秀荣</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>林允儿</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>徐贤</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>郑秀晶</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="../dist/modules/jquery.min.js"></script>
+    <script src="../dist/modules/popper.js"></script>
+    <script src="../dist/modules/tooltip.js"></script>
+    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../dist/js/sa-functions.js"></script>
+
+    <script src="../dist/modules/chart.min.js"></script>
+    <script src="../dist/modules/summernote/summernote-lite.js"></script>
+
+    <script>
+  var ctx = document.getElementById("myChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      datasets: [{
+        label: 'Statistics',
+        data: [460, 458, 330, 502, 430, 610, 488],
+        borderWidth: 2,
+        backgroundColor: 'rgb(87,75,144)',
+        borderColor: 'rgb(87,75,144)',
+        borderWidth: 2.5,
+        pointBackgroundColor: '#ffffff',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            stepSize: 150
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
+      },
+    }
+  });
+    </script>
+    <script src="../dist/js/scripts.js"></script>
+    <script src="../dist/js/custom.js"></script>
+    <script src="../dist/js/demo.js"></script>
+</body>
+</html>

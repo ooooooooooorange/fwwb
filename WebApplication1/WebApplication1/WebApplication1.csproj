@@ -159,7 +159,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup1.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\OperatorIController.cs" />
+    <Compile Include="Controllers\OperatorIIController.cs" />
+    <Compile Include="Controllers\SupervisorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,8 +222,26 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\View.cshtml" />
-    <Content Include="Views\Home\VView.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\OperatorI\OutStock.cshtml" />
+    <Content Include="Views\OperatorI\ImStock.cshtml" />
+    <Content Include="Views\OperatorI\Repair.cshtml" />
+    <Content Include="Views\OperatorI\Index.cshtml" />
+    <Content Include="Views\OperatorII\BoughtAsk.cshtml" />
+    <Content Include="Views\OperatorII\RepairDeal.cshtml" />
+    <Content Include="Views\OperatorII\ScrapAsk.cshtml" />
+    <Content Include="Views\OperatorII\ToolInformation.cshtml" />
+    <Content Include="Views\OperatorII\Index.cshtml" />
+    <Content Include="Views\Supervisor\Index.cshtml" />
+    <Content Include="Views\Supervisor\ClassRevise.cshtml" />
+    <Content Include="Views\Supervisor\BoughtDeal.cshtml" />
+    <Content Include="Views\Supervisor\ScrapDeal.cshtml" />
+    <Content Include="Views\Manager\Index.cshtml" />
+    <Content Include="Views\Manager\BoughtFinalDeal.cshtml" />
+    <Content Include="Views\Manager\ScrapFinalDeal.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\UserRevise.cshtml" />
+    <Content Include="Views\Admin\UserPower.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

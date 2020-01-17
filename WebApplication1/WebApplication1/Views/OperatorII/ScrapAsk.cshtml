@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "ScrapAsk";//报废申请
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
+    <title>捷普科技 &mdash; 工夹具管理系统</title>
+
+    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../dist/css/demo.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+
+                <ul class="navbar-nav navbar-right">
+                    <a style="color: whitesmoke ;height:10px;
+	font-size:15px;">报废申请</a>
+
+                    <li class="text_head">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+                            <i class="ion ion-android-person d-lg-none"></i>
+                            <div class="" id="greet">Hi, 李四</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="profile.html" class="dropdown-item has-icon">
+                                <i class="ion ion-android-person"></i> 个人
+                            </a>
+                            <a href=" login.html" class="dropdown-item has-icon">
+                                <i class="ion ion-log-out"></i> 退出
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+
+            </nav>
+
+
+            <div class="main-sidebar">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="index02.html">JABIL 捷普科技</a>
+                    </div>
+                    <div class="sidebar-user">
+                        <div class="sidebar-user-picture">
+                            <img alt="image" src="../dist/img/avatar/avatar-2.jpeg" id="user_img">
+                        </div>
+                        <div class="sidebar-user-details">
+                            <div class="user-name" id="username">李四</div>
+                            <div class="user-role" id="role">
+                                高级用户
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Welcome</li>
+                        <li class="active">
+                            <a href="index02.html"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
+                        </li>
+                        <li class="menu-header">FUNCTION</li>
+                        <li>
+                            <a href="bought_ask.html"><i class="ion ion-flag"></i><span>采购入库</span></a>
+                        </li>
+                        <li>
+                            <a href="repair_deal.html"><i class="ion ion-clipboard"></i><span>报修申请</span></a>
+                        </li>
+                        <li>
+                            <a href="scrap_ask.html"><i class="ion ion-clipboard"></i><span>报废申请</span></a>
+                        </li>
+                        <li>
+                            <a href="tool_information.html"><i class="ion ion-ios-copy-outline"></i><span>工夹具基础信息</span></a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+
+
+            <form class="section-body" method="POST">
+                <p class="text01">报废申请信息填写</p>
+                <p class="contenter">>- - - - - - - - - - - - -</p>
+                <div class="row">
+                    <div class="row1">
+                        <a class="text2" style="color:#574B90"> 申请人</a>
+                        <input class="input02" id="applicator" type="text" name="applicator" tabindex="2" required>
+                    </div>
+                    <div class="row2">
+                        <a class="text2" style="color:#574B90"> 物品代码</a>
+                        <input class="input03" id="tool_code" type="text" name="tool_code" tabindex="2" required>
+                    </div>
+
+                    <div class="row3">
+                        <a class="text2" style="color:#574B90"> 寿命计数</a>
+                        <input class="input03" id="lifespan" type="text" name="lifespan" tabindex="2" required>
+
+                    </div>
+
+                    <div class="row4">
+                        <p class="text3" style="color:#574B90">报废描述(请详细描述报废原因）</p>
+                        <textarea class="textarea01" id="reason" name="reason" tabindex="2" required>
+          </textarea>
+                    </div>
+                    <script>
+          function onclk5()
+          {
+            if(isNaN(document.getElementById("applicator").value) && isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("lifespan").value) && isNaN(document.getElementById("reason").value))
+
+            {
+              alert("报废信息提交成功");
+            }
+            else
+            {
+              alert("请填写完整信息")
+            }
+          }
+                    </script>
+                    <div class="btn02">
+                        <button type="submit" class="btn btn-primary btn-block" tabindex="4" onclick="onclk5()">
+                            提交
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <style>
+                body {
+                    background-image: url('../dist/img/avatar/02.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            </style>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="../dist/modules/jquery.min.js"></script>
+    <script src="../dist/modules/popper.js"></script>
+    <script src="../dist/modules/tooltip.js"></script>
+    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../dist/js/sa-functions.js"></script>
+
+    <script src="../dist/modules/chart.min.js"></script>
+    <script src="../dist/modules/summernote/summernote-lite.js"></script>
+
+    <script>
+  var ctx = document.getElementById("myChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      datasets: [{
+        label: 'Statistics',
+        data: [460, 458, 330, 502, 430, 610, 488],
+        borderWidth: 2,
+        backgroundColor: 'rgb(87,75,144)',
+        borderColor: 'rgb(87,75,144)',
+        borderWidth: 2.5,
+        pointBackgroundColor: '#ffffff',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            stepSize: 150
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
+      },
+    }
+  });
+    </script>
+    <script src="../dist/js/scripts.js"></script>
+    <script src="../dist/js/custom.js"></script>
+    <script src="../dist/js/demo.js"></script>
+</body>
+</html>
