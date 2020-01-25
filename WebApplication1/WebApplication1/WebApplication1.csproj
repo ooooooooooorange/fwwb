@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\OperatorIController.cs" />
     <Compile Include="Controllers\OperatorIIController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
     <Compile Include="Controllers\SupervisorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

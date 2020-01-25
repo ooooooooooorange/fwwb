@@ -30,42 +30,51 @@
 
 
 
-                            <div class="dropdown-style">
-
-                                <div class="form-group">
-                                    <label for="select01">身份选择</label>
-
-                                    <select id="select01" name="select01" class="controls">
-                                        <option value="0">初级用户</option>
-                                        <option value="1">高级用户</option>
-                                        <option value="2">监管员</option>
-                                        <option value="3">经理</option>
-                                        <option value="4">系统管理员</option>
-                                    </select>
-                                </div>
-                            </div>
+                            
 
                             <script>
                                 function onclk() {
-                                    
-                                        window.location.href='../Home/Test';
-                                    
-                                
+                                    /*$.ajax({
+                                        url: "/JqGridDemo/AjaxData/GetParamsFromAjax",
+                                        type: "GET",
+                                        data: { EmployeeID: 'NX001', EmployeeName: '张三' },
+                                        error: function (message) {
+                                            alert('error!');
+
+                                        }
+                                    });*/
+                                    window.location.href = '../Home/Test';
+
+
                                 }
                             </script>
 
                             <div class="card-body">
-                                <form method="POST" action="#" class="needs-validation" novalidate="">
+                                <form method="POST" action="~/Home/Test" class="needs-validation" novalidate="">
+                                    <div class="dropdown-style">
+
+                                        <div class="form-group">
+                                            <label for="select01">身份选择</label>
+
+                                            <select id="select01" name="user_type" class="controls">
+                                                <option value="0">初级用户</option>
+                                                <option value="1">高级用户</option>
+                                                <option value="2">监管员</option>
+                                                <option value="3">经理</option>
+                                                <option value="4">系统管理员</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="username">用户名</label>
-                                        <input id="username" type="text" class="form-control" name="username" tabindex="2" value="@ViewBag.UserName" required autofocus>
+                                        <input id="username" type="text" class="form-control" name="username" tabindex="2" required autofocus>
                                         <div class="invalid-feedback">
                                             请填写用户名
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="password"  class="d-block">
+                                        <label for="password" class="d-block">
                                             密码(不能为纯数字）
                                             <div class="float-right">
                                                 <a href="forgot.html">
@@ -73,7 +82,7 @@
                                                 </a>
                                             </div>
                                         </label>
-                                        <input id="password" value="@ViewBag.Password" type="password" class="form-control" name="password" tabindex="2" required>
+                                        <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
                                         <div class="invalid-feedback">
                                             请填写密码
                                         </div>
@@ -81,12 +90,12 @@
 
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" name="remember"  class="custom-control-input" tabindex="3" id="remember-me">
+                                            <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
                                             <label class="custom-control-label" for="remember-me">记住账号</label>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block" tabindex="4" onclick="onclk()">
+                                        <button type="submit" class="btn btn-primary btn-block" tabindex="4">
                                             登陆
                                         </button>
                                     </div>

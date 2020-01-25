@@ -11,7 +11,7 @@ namespace WebApplication1.Models
     //  用户类型，暂定于以下四种类型
     enum UserType
     {
-        OperatorI,
+        OperatorI=1,
         OperatorII,
         Supervisor,
         Manager,
@@ -20,11 +20,11 @@ namespace WebApplication1.Models
     }
     partial class User
     {
-        private String uid { get; set; }
-        private UserType type { get; set; }
-        private String password { get; set; }
-        private ArraySegment<ReqInfo> req_infos { get; set; }
-        private String name { get; set; }
+        public String uid { get; set; }
+        public UserType type { get; set; }
+        public String password { get; set; }
+        public ArraySegment<ReqInfo> req_infos { get; set; }
+        public String name { get; set; }
     }
     //工夹具类型，具体类型后期添加
     partial class Fixture
