@@ -15,7 +15,7 @@ namespace WebApplication1.Controllers
     public class ManagerController : Controller
     {
         // GET: Manager
-        public ActionResult Index()
+        public ActionResult Index(string name)
         {
             return View();
         }

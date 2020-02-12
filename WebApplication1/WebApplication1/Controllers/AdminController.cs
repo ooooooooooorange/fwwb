@@ -6,10 +6,15 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
+    /// <summary>
+    /// 管理员界面
+    /// 功能：
+    ///     添加删除用户
+    /// </summary>
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult Index(string name)
         {
             return View();
         }

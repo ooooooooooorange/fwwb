@@ -52,12 +52,12 @@ namespace WebApplication1.Models
         /// <summary>
         /// 采购入库收据单号
         /// </summary>
-        private String receipt_id;
-        private DateTime date;
+        public String receipt_id;
+        public DateTime date;
         /// <summary>
         /// 最终审核人员（Work cell经理）
         /// </summary>
-        private String fina_approver;
+        public String fina_approver;
         /// <summary>
         /// 通过字符串的构造函数
         /// </summary>
@@ -98,8 +98,10 @@ namespace WebApplication1.Models
     /// </summary>
     partial class ImExReq : ReqInfo
     {
-        private String production_line;
-        private DateTime date;
+        public bool is_im { get; set; }
+        public String produe_line { get; set; }
+        public String record_user { get; set; }
+        public DateTime date { get; set; }
         /// <summary>
         /// 通过字符串的构造函数
         /// </summary>
@@ -141,7 +143,7 @@ namespace WebApplication1.Models
         /// <summary>
         /// 故障描述
         /// </summary>
-        private String describe;
+        public String describe;
         /// <summary>
         /// 通过字符串的构造函数
         /// </summary>
@@ -193,15 +195,15 @@ namespace WebApplication1.Models
         /// <summary>
         /// 物品寿命计数
         /// </summary>
-        private String count;
+        public String count;
         /// <summary>
         /// 报废原因
         /// </summary>
-        private String reason;
+        public String reason;
         /// <summary>
         /// 最终审核人员（Work cell经理）
         /// </summary>
-        private String fina_approver;
+        public String fina_approver;
         public ScrapReq(String info) : base(info)
         {
 

@@ -298,11 +298,10 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
 	width:6%;
 
 }
-.controls{
-	width:310px;
-	color:  #574B90;
-
-
+.dddd,
+.controls {
+    width: 310px !important;
+    color: #574B90 !important;
 }
 .dropdown-style
 

@@ -2,9 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 
 body {
-	background-color: #F6F6F6;
+	background-color:white ;
 	font-size: 14px;
+	font-family:Helvetica,Tahoma, Arial,"PingFang SC",STXihei,"Microsoft yahei","WenQuanYi Micro Hei",sans-serif;
+
+
 }
+
+
+
 
 /*reset*/
 /* remove box shadow */
@@ -33,6 +39,280 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
 /* end hyperlink */
 
 /* dropdown */
+
+
+
+
+
+
+.text_head
+{
+   position: absolute;
+	left:90%;
+	height:10px;
+	font-size:20px;
+
+}
+
+.contenter
+{
+
+	position: absolute;
+	top: 20%;
+	left: 22%;
+	font-size: 15px;
+	color:#868e96 ;
+}
+.text01
+{
+	position: absolute;
+	top: 18%;
+	left: 22%;
+	font-size: 15px;
+	color:#868e96 ;
+}
+.btn01
+{
+
+	position: absolute;
+	top:65%;
+	left:48%;
+	font-size: 15px;
+	color: #2d3db8;
+	width:5%;
+}
+
+
+.row1 {
+
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	border-radius: 10px;
+	width: 60%;;
+	height: 20px;
+
+}
+.row2 {
+
+	position: absolute;
+	top: 36%;
+	left: 25%;
+	border-radius: 10px;
+	width: 60%;;
+	height: 20px;
+
+}
+
+.row3 {
+
+	position: absolute;
+	top: 42%;
+	left: 25%;
+	border-radius: 10px;
+	width: 60%;;
+	height: 20px;
+
+}
+
+.row4 {
+
+	position: absolute;
+	top: 48%;
+	left: 25%;
+	border-radius: 10px;
+	width: 60%;;
+	height: 20px;
+
+}
+
+.row5 {
+
+	position: absolute;
+	top: 54%;
+	left: 25%;
+	border-radius: 10px;
+	width: 60%;;
+	height: 20px;
+}
+
+.row6 {
+
+	position: absolute;
+	top: 60%;
+	left: 25%;
+	border-radius: 10px;
+	width: 60%;;
+	height: 20px;
+
+}
+
+
+.text1
+{
+	margin-left: 50px;
+	color:#574B90;
+	font-size: 15px;
+
+}
+.input01{
+	position: relative;
+	margin-left: 20px;
+	width: 30%;
+	height:28px;
+	border-radius:5px;
+}
+
+
+
+.text2
+{
+	margin-left: 250px;
+	color:#574B90;
+	font-size: 15px;
+
+}
+
+
+.input02{
+	margin-left: 20px;
+	width: 30%;
+	height:35px;
+
+}
+
+
+
+.input03{
+	margin-left: 6px;
+	width: 30%;
+	height:35px;
+
+}
+
+
+
+
+.text3
+ {
+	 margin-left: 250px;
+	 margin-top: 0px;
+	 color:#574B90;
+	 font-size: 15px;
+
+ }
+
+.textarea01
+{
+	margin-left: 320px;
+	width: 30%;
+	height:180px;
+
+
+
+}
+
+.text4
+{
+	margin-left: 250px;
+	color:#574B90;
+	font-size: 15px;
+
+}
+.text5
+{
+	position: absolute;
+	top: 18%;
+	left:20%;
+	font-size: 15px;
+	color:#868e96 ;
+}
+.text06
+{
+
+	position: absolute;
+	top: 18%;
+	left:5%;
+	font-size: 20px;
+	color:darkslateblue;
+
+}
+
+.input04{
+
+	margin-left:20px;
+	margin-top: 45px;
+	width: 90%;
+	height:35px;
+	border-radius: 5px;
+
+}
+.contenter1
+{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	font-size: 15px;
+	color:#868e96 ;
+}
+
+
+
+.btn02
+{
+	position: absolute;
+	top:80%;
+	left:50%;
+	font-size: 15px;
+	color: #2d3db8;
+	width:5%;
+
+}
+
+.btn03{
+
+	position: absolute;
+	top:78%;
+	left:55%;
+	font-size: 15px;
+	color: #2d3db8;
+	width:5%;
+}
+
+.btn04
+{
+
+	position: absolute;
+	top:23%;
+	left:20%;
+	font-size: 15px;
+	width:5%;
+}
+
+.btn05{
+
+	position: absolute;
+	top:23%;
+	left:20%;
+	font-size: 15px;
+	width:6%;
+
+}
+.controls{
+	width:310px;
+	color:  #574B90;
+
+
+}
+.dropdown-style
+
+{
+	padding-bottom:2px;
+	padding-left: 20px;
+	margin-bottom: 2px;
+	height:50px;
+
+}
 .dropdown-menu {
 	border: none;
 	-webkit-box-shadow: 0 0 25px rgba(0,0,0,.15);
@@ -1023,7 +1303,7 @@ div.dataTables_wrapper div.dataTables_processing {
 .login-brand {
 	margin: 20px 0;
 	margin-bottom: 40px;
-	font-size: 24px;
+	font-size: 40px;
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	color: #666;
@@ -1032,6 +1312,7 @@ div.dataTables_wrapper div.dataTables_processing {
 /*end login*/
 
 /*summary*/
+
 .summary {
 	display: inline-block;
 	width: 100%;

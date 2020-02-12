@@ -25,6 +25,29 @@ namespace WebApplication1
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Newstyle/css").Include(
+                      "~/dist/modules/bootstrap/css/bootstrap.min.css",
+                      "~/dist/modules/ionicons/css/ionicons.min.css",
+                      "~/dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css",
+                      "~/dist/css/demo.css",
+                      "~/dist/css/style.css"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/Newbootstrap").Include(
+                    "~/dist/modules/jquery.min.js",
+                    "~/dist/modules/popper.js",
+                    "~/dist/modules/tooltip.js",
+                    "~/dist/modules/bootstrap/js/bootstrap.min.js",
+                    "~/dist/modules/nicescroll/jquery.nicescroll.min.js",
+                    "~/dist/modules/moment.min.js",
+                    "~/dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js",
+                    "~/dist/js/sa-functions.js",
+
+                    "~/dist/js/scripts.js",
+                    "~/dist/js/custom.js",
+                    "~/dist/js/demo.js"
+                      ));
         }
     }
 }

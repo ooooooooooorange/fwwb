@@ -30,8 +30,14 @@ namespace WebApplication1.Models
         /// <returns>成功返回该用户，失败返回空</returns>
         public static  User Login(String id,String pwd,UserType tp)
         {
-            User ret = new User { uid = id, type = tp };
-            ret.Select();
+            //TODO 思考 如何登录，传递哪些信息
+
+            User ret = new User { uid = id, type = tp,
+#if !HASDB  //仅测试时将密码后传
+                password =pwd 
+#endif
+                };
+            ret=ret.Select();
             if (pwd == ret.password)
                 return ret;
             else return null;
