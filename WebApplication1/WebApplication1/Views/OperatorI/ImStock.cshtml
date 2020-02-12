@@ -9,6 +9,14 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
     <title>捷普科技 &mdash; 工夹具管理系统</title>
 
+    <link rel="stylesheet" href="../../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="../../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../dist/css/demo.css">
+    <link rel="stylesheet" href="../../dist/css/style.css">
 </head>
 
 <body>
@@ -30,7 +38,7 @@
                     <li class="text_head">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="d-sm-none d-lg-inline-block" id="greet">Hi, 张三</div>
+                            <div class="d-sm-none d-lg-inline-block" id="greet">Hi, @ViewBag.UsrName</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="profile.html" class="dropdown-item has-icon">
@@ -59,7 +67,7 @@
                             <img alt="image" src="~/dist/img/avatar/avatar-1.jpeg" id="user_img">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name" id="username">张三</div>
+                            <div class="user-name" id="username">@ViewBag.UsrName</div>
                             <div class="user-role" id="role">
                                 初级用户
                             </div>
@@ -170,22 +178,17 @@
 
 
                     <script>
-          function onclk1()
-
-          {
+                        function onclk1() {
 
 
 
 
-           if(isNaN(document.getElementById("time").value) && isNaN(document.getElementById("record_user").value) && isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("tool_model").value) && isNaN(document.getElementById("tool_location").value) && isNaN(document.getElementById("tool_partno").value) && isNaN(document.getElementById("tool_family").value) && isNaN(document.getElementById("produce_line").value) && isNaN(document.getElementById("tool_name").value) && isNaN(document.getElementById("rent_user").value))
-
-            {
-             alert("提交成功");
-           }
-            else
-           {
-             alert("请填写完整信息")
-           }
+                            if (isNaN(document.getElementById("time").value) && isNaN(document.getElementById("record_user").value) && isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("tool_model").value) && isNaN(document.getElementById("tool_location").value) && isNaN(document.getElementById("tool_partno").value) && isNaN(document.getElementById("tool_family").value) && isNaN(document.getElementById("produce_line").value) && isNaN(document.getElementById("tool_name").value) && isNaN(document.getElementById("rent_user").value)) {
+                                alert("提交成功");
+                            }
+                            else {
+                                alert("请填写完整信息")
+                            }
 
 
 
@@ -193,7 +196,7 @@
 
 
 
-          }
+                        }
 
                     </script>
 
@@ -221,56 +224,56 @@
         </div>
     </div>
 
-    <script src="~/dist/modules/jquery.min.js"></script>
-    <script src="~/dist/modules/popper.js"></script>
-    <script src="~/dist/modules/tooltip.js"></script>
-    <script src="~/dist/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="~/dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-    <script src="~/dist/js/sa-functions.js"></script>
+    <script src="../../dist/modules/jquery.min.js"></script>
+    <script src="../../dist/modules/popper.js"></script>
+    <script src="../../dist/modules/tooltip.js"></script>
+    <script src="../../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../../dist/js/sa-functions.js"></script>
 
-    <script src="~/dist/modules/chart.min.js"></script>
-    <script src="~/dist/modules/summernote/summernote-lite.js"></script>
+    <script src="../../dist/modules/chart.min.js"></script>
+    <script src="../../dist/modules/summernote/summernote-lite.js"></script>
 
     <script>
-  var ctx = document.getElementById("myChart").getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      datasets: [{
-        label: 'Statistics',
-        data: [460, 458, 330, 502, 430, 610, 488],
-        borderWidth: 2,
-        backgroundColor: 'rgb(87,75,144)',
-        borderColor: 'rgb(87,75,144)',
-        borderWidth: 2.5,
-        pointBackgroundColor: '#ffffff',
-        pointRadius: 4
-      }]
-    },
-    options: {
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-            stepSize: 150
-          }
-        }],
-        xAxes: [{
-          gridLines: {
-            display: false
-          }
-        }]
-      },
-    }
-  });
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                datasets: [{
+                    label: 'Statistics',
+                    data: [460, 458, 330, 502, 430, 610, 488],
+                    borderWidth: 2,
+                    backgroundColor: 'rgb(87,75,144)',
+                    borderColor: 'rgb(87,75,144)',
+                    borderWidth: 2.5,
+                    pointBackgroundColor: '#ffffff',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 150
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                },
+            }
+        });
     </script>
-    <script src="~/dist/js/scripts.js"></script>
-    <script src="~/dist/js/custom.js"></script>
-    <script src="~/dist/js/demo.js"></script>
+    <script src="../../dist/js/scripts.js"></script>
+    <script src="../../dist/js/custom.js"></script>
+    <script src="../../dist/js/demo.js"></script>
 </body>
 </html>
