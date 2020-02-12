@@ -95,61 +95,62 @@
             <form class="section-body" method="POST">
                 <p class="text01">采购入库信息</p>
                 <p class="contenter">>- - - - - - - - - -  </p>
-                <div class="row">
-                    <div class="row1">
-                        <a class="text2" style="color:#574B90"> 采购日期</a>
-                        <input class="input03" id="data" type="text" name="data" tabindex="2" required>
-                    </div>
-                    <div class="row2">
-                        <a class="text2" style="color:#574B90"> 申请人</a>
-                        <input class="input02" id="applicator" type="text" name="applicator" tabindex="2" required>
-                    </div>
 
-                    <div class="row3">
-                        <a class="text2" style="color:#574B90"> 单据号</a>
-                        <input class="input02" id="doc_num" type="text" name="doc_num" tabindex="2" required>
-                    </div>
-                    <div class="row4">
-                        <a class="text2" style="color:#574B90"> 类别代码</a>
-                        <input class="input03" id="class_code" type="text" name="class_code" tabindex="2" required>
-                    </div>
-
-                    <div class="row5">
-                        <a class="text2" style="color:#574B90"> 物品代码</a>
-                        <input class="input03" id="tool_code" type="text" name="tool_code" tabindex="2" required>
-                    </div>
-
-
-
-                    <div class="row6">
-                        <a class="text4" style="color:#574B90">物品照片</a>
-                        <label class="sr-only" for="inputfile1">文件输入</label>
-                        <input type="file" id="inputfile1" name="inputfile1">
-                    </div>
-
-
+                
+                <div class="table-responsive">
+                    <table class="table" style="position: absolute;width:40%;top:25%;left: 28%">
+                        <thead>
+                            <tr>
+                                <th style="width:16%;">信息</th>
+                                <th>输入</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:#574B90 ">申请人</td>
+                                <td> <input style="border-radius:5px;width:20%" id="applicator" type="text" name="data" tabindex="2" required></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">采购日期</td>
+                                <td> <input style="border-radius:5px;width:40%" id="data" type="text" name="data" tabindex="2" required></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">类别代码</td>
+                                <td> <input style="border-radius:5px;width:40%" id="class_code" type="text" name="data" tabindex="2" required></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">物品代码</td>
+                                <td> <input style="border-radius:5px;width:40%" id="tool_code" type="text" name="tool_code" tabindex="2" required></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">物品照片</td>
+                                <td>
+                                    <label class="sr-only" for="inputfile1">文件输入</label>
+                                    <input type="file" id="inputfile1" name="inputfile1">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <script>
-          function onclk4()
-          {
-            if( isNaN(document.getElementById("data").value) && isNaN(document.getElementById("applicator").value)&& isNaN(document.getElementById("doc_num").value) && isNaN(document.getElementById("class_code").value) &&  isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("inputfile1").value))
-
-            {
-              alert("采购入库信息提交成功");
-            }
-            else
-            {
-              alert("请填写完整信息")
-            }
-          }
+                        function onclk4() {
+                            if (isNaN(document.getElementById("data").value) && isNaN(document.getElementById("applicator").value) && isNaN(document.getElementById("doc_num").value) && isNaN(document.getElementById("class_code").value) && isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("inputfile1").value)) {
+                                alert("采购入库信息提交成功");
+                            }
+                            else {
+                                alert("请填写完整信息")
+                            }
+                        }
                     </script>
-
                     <div class="btn03">
                         <button type="submit" class="btn btn-primary btn-block" tabindex="4" onclick="onclk4()">
                             提交
                         </button>
                     </div>
-
                 </div>
+
+
+
+
             </form>
             <style>
                 body {

@@ -101,21 +101,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>初级用户</td>
+                            <td id="username1">张三</td>
                             <td>
-                                <p id="1list1">出入库操作</p>
-                                <p id="1list2">提交报修申请</p>
-                                <p id="1list3"></p>
-                                <p id="1list4"></p>
-                                <p id="1list5"></p>
-                                <p id="1list6"></p>
-                                <p id="1list7"></p>
-                                <p id="1list8"></p>
-                                <p id="1list9"></p>
-                                <p id="1list10"></p>
-                                <p id="1list11"></p>
-                                <p id="1list12"></p>
-                                <p id="1list13"></p>
+                                <p id="power1">初级用户</p>
                             </td>
                             <td>
                                 <a href="user_power2.html" data-toggle="modal" data-target="#myModal">修改</a>
@@ -128,175 +116,61 @@
                                                 </p>
                                             </div>
                                             <script>
-                  function onclk9() {
+                                                function onclk9() {
 
-                    if (document.getElementById("1q1").checked) {
+                                                    if (document.getElementById("1q1").checked) {
 
-                      document.getElementById("1list1").textContent="出入库操作"
-                    }
-                    if (!(document.getElementById("1q1").checked)) {
+                                                        document.getElementById("power1").textContent = "初级用户"
+                                                    }
 
-                      document.getElementById("1list1").textContent=""
-                    }
+                                                    if (document.getElementById("1q2").checked) {
 
-                    if (document.getElementById("1q2").checked) {
-
-                      document.getElementById("1list2").textContent="提交报修申请"
-                    }
-                    if (!(document.getElementById("1q2").checked)) {
-
-                      document.getElementById("1list2").textContent=""
-                    }
-
-                    if (document.getElementById("1q3").checked) {
-
-                      document.getElementById("1list3").textContent="处理报修申请"
-                    }
-                    if (!(document.getElementById("1q3").checked)) {
-
-                      document.getElementById("1list3").textContent=""
-                    }
+                                                        document.getElementById("power1").textContent = "高级用户"
+                                                    }
 
 
-                    if (document.getElementById("1q4").checked) {
+                                                    if (document.getElementById("1q3").checked) {
 
-                      document.getElementById("1list4").textContent="提交采购入库申请"
-                    }
-                    if (!(document.getElementById("1q4").checked)) {
-
-                      document.getElementById("1list4").textContent=""
-                    }
+                                                        document.getElementById("power1").textContent = "监管员"
+                                                    }
 
 
-                    if (document.getElementById("1q5").checked) {
 
-                      document.getElementById("1list5").textContent="处理采购入库申请"
-                    }
-                    if (!(document.getElementById("1q5").checked)) {
+                                                    if (document.getElementById("1q4").checked) {
 
-                      document.getElementById("1list5").textContent=""
-                    }
+                                                        document.getElementById("power1").textContent = "经理"
+                                                    }
 
 
-                    if (document.getElementById("1q6").checked) {
 
-                      document.getElementById("1list6").textContent="最终处理采购入库申请"
-                    }
-                    if (!(document.getElementById("1q6").checked)) {
+                                                    if (document.getElementById("1q5").checked) {
 
-                      document.getElementById("1list6").textContent=""
-                    }
-
-                    if (document.getElementById("1q7").checked) {
-
-                      document.getElementById("1list7").textContent="提交报废申请"
-                    }
-                    if (!(document.getElementById("1q7").checked)) {
-
-                      document.getElementById("1list7").textContent=""
-                    }
+                                                        document.getElementById("power1").textContent = "系统管理员"
+                                                    }
 
 
-                    if (document.getElementById("1q8").checked) {
-
-                      document.getElementById("1list8").textContent="处理报废申请"
-                    }
-                    if (!(document.getElementById("1q8").checked)) {
-
-                      document.getElementById("1list8").textContent=""
-                    }
 
 
-                    if (document.getElementById("1q9").checked) {
 
-                      document.getElementById("1list9").textContent="最终处理报废申请"
-                    }
-                    if (!(document.getElementById("1q9").checked)) {
-
-                      document.getElementById("1list9").textContent=""
-                    }
-
-
-                    if (document.getElementById("1q10").checked) {
-
-                      document.getElementById("1list10").textContent="修改工夹具基础信息"
-                    }
-                    if (!(document.getElementById("1q10").checked)) {
-
-                      document.getElementById("1list10").textContent=""
-                    }
-
-                    if (document.getElementById("1q11").checked) {
-
-                      document.getElementById("1list11").textContent="创建和修改工夹具类别"
-                    }
-                    if (!(document.getElementById("1q11").checked)) {
-
-                      document.getElementById("1list11").textContent=""
-                    }
-
-
-                    if (document.getElementById("1q12").checked) {
-
-                      document.getElementById("1list12").textContent="添加或删除用户"
-                    }
-                    if (!(document.getElementById("1q12").checked)) {
-
-                      document.getElementById("1list12").textContent=""
-                    }
-
-
-                    if (document.getElementById("1q13").checked) {
-
-                      document.getElementById("1list13").textContent="更改用户权限"
-                    }
-                    if (!(document.getElementById("1q13").checked)) {
-
-                      document.getElementById("1list13").textContent=""
-                    }
-
-                  }
+                                                }
                                             </script>
                                             <div class="modal-body">
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q1" value="0">进出库管理</label>
+                                                    <label><input type="checkbox" id="1q1" value="0">初级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q2" value="1">提交报修申请</label>
+                                                    <label><input type="checkbox" id="1q2" value="1">高级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q3" value="2">处理报修申请</label>
+                                                    <label><input type="checkbox" id="1q3" value="2">监管员</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q4" value="3">提交采购入库申请</label>
+                                                    <label><input type="checkbox" id="1q4" value="3">经理</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q5" value="4">处理采购入库申请</label>
+                                                    <label><input type="checkbox" id="1q5" value="4">系统管理员</label>
                                                 </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q6" value="5">最终处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q7" value="6">提交报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q8" value="">处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q9" value="">最终处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q10" value="">修改工夹具基础信息</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q11" value="">创建和修改工夹具类别</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q12" value="">添加或删除用户</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="1q13" value="">更改用户权限</label>
-                                                </div>
+
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="submit" onclick="onclk9()" class="btn-apply" style="color: darkslateblue">
@@ -318,23 +192,12 @@
 
 
 
-                        <!--这里是高级用户-->
+                        <!--这里是李四-->
                         <tr>
-                            <td>高级用户</td>
+                            <td id="username2">李四</td>
                             <td>
-                                <p id="2list1"></p>
-                                <p id="2list2"></p>
-                                <p id="2list3">处理报修申请</p>
-                                <p id="2list4">提交采购入库申请</p>
-                                <p id="2list5"></p>
-                                <p id="2list6"></p>
-                                <p id="2list7">提交报废申请</p>
-                                <p id="2list8"></p>
-                                <p id="2list9"></p>
-                                <p id="2list10">修改工夹具基础信息</p>
-                                <p id="2list11"></p>
-                                <p id="2list12"></p>
-                                <p id="2list13"></p>
+                                <p id="power2">高级用户</p>
+
                             </td>
                             <td>
                                 <a href="user_power2.html" data-toggle="modal" data-target="#myModal2">修改</a>
@@ -347,176 +210,62 @@
                                                 </p>
                                             </div>
                                             <script>
-                  function onclk10() {
+                                                function onclk10() {
 
-                    if (document.getElementById("2q1").checked) {
+                                                    if (document.getElementById("2q1").checked) {
 
-                      document.getElementById("2list1").textContent="出入库操作"
-                    }
-                    if (!(document.getElementById("2q1").checked)) {
+                                                        document.getElementById("power2").textContent = "初级用户"
+                                                    }
 
-                      document.getElementById("2list1").textContent=""
-                    }
+                                                    if (document.getElementById("2q2").checked) {
 
-                    if (document.getElementById("2q2").checked) {
-
-                      document.getElementById("2list2").textContent="提交报修申请"
-                    }
-                    if (!(document.getElementById("2q2").checked)) {
-
-                      document.getElementById("2list2").textContent=""
-                    }
-
-                    if (document.getElementById("2q3").checked) {
-
-                      document.getElementById("2list3").textContent="处理报修申请"
-                    }
-                    if (!(document.getElementById("2q3").checked)) {
-
-                      document.getElementById("2list3").textContent=""
-                    }
+                                                        document.getElementById("power2").textContent = "高级用户"
+                                                    }
 
 
-                    if (document.getElementById("2q4").checked) {
+                                                    if (document.getElementById("2q3").checked) {
 
-                      document.getElementById("2list4").textContent="提交采购入库申请"
-                    }
-                    if (!(document.getElementById("2q4").checked)) {
-
-                      document.getElementById("2list4").textContent=""
-                    }
+                                                        document.getElementById("power2").textContent = "监管员"
+                                                    }
 
 
-                    if (document.getElementById("2q5").checked) {
 
-                      document.getElementById("2list5").textContent="处理采购入库申请"
-                    }
-                    if (!(document.getElementById("2q5").checked)) {
+                                                    if (document.getElementById("2q4").checked) {
 
-                      document.getElementById("2list5").textContent=""
-                    }
+                                                        document.getElementById("power2").textContent = "经理"
+                                                    }
 
 
-                    if (document.getElementById("2q6").checked) {
 
-                      document.getElementById("2list6").textContent="最终处理采购入库申请"
-                    }
-                    if (!(document.getElementById("2q6").checked)) {
+                                                    if (document.getElementById("2q5").checked) {
 
-                      document.getElementById("2list6").textContent=""
-                    }
-
-                    if (document.getElementById("2q7").checked) {
-
-                      document.getElementById("2list7").textContent="提交报废申请"
-                    }
-                    if (!(document.getElementById("2q7").checked)) {
-
-                      document.getElementById("2list7").textContent=""
-                    }
+                                                        document.getElementById("power2").textContent = "系统管理员"
+                                                    }
 
 
-                    if (document.getElementById("2q8").checked) {
-
-                      document.getElementById("2list8").textContent="处理报废申请"
-                    }
-                    if (!(document.getElementById("2q8").checked)) {
-
-                      document.getElementById("2list8").textContent=""
-                    }
 
 
-                    if (document.getElementById("2q9").checked) {
 
-                      document.getElementById("2list9").textContent="最终处理报废申请"
-                    }
-                    if (!(document.getElementById("2q9").checked)) {
-
-                      document.getElementById("1list9").textContent=""
-                    }
-
-
-                    if (document.getElementById("2q10").checked) {
-
-                      document.getElementById("2list10").textContent="修改工夹具基础信息"
-                    }
-                    if (!(document.getElementById("2q10").checked)) {
-
-                      document.getElementById("2list10").textContent=""
-                    }
-
-                    if (document.getElementById("2q11").checked) {
-
-                      document.getElementById("2list11").textContent="创建和修改工夹具类别"
-                    }
-                    if (!(document.getElementById("2q11").checked)) {
-
-                      document.getElementById("2list11").textContent=""
-                    }
-
-
-                    if (document.getElementById("2q12").checked) {
-
-                      document.getElementById("2list12").textContent="添加或删除用户"
-                    }
-                    if (!(document.getElementById("2q12").checked)) {
-
-                      document.getElementById("2list12").textContent=""
-                    }
-
-
-                    if (document.getElementById("2q13").checked) {
-
-                      document.getElementById("2list13").textContent="更改用户权限"
-                    }
-                    if (!(document.getElementById("2q13").checked)) {
-
-                      document.getElementById("2list13").textContent=""
-                    }
-
-                  }
+                                                }
                                             </script>
 
                                             <div class="modal-body">
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q1" value="0">进出库管理</label>
+                                                    <label><input type="checkbox" id="2q1" value="0">初级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q2" value="1">提交报修申请</label>
+                                                    <label><input type="checkbox" id="2q2" value="1">高级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q3" value="2">处理报修申请</label>
+                                                    <label><input type="checkbox" id="2q3" value="2">监管员</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q4" value="3">提交采购入库申请</label>
+                                                    <label><input type="checkbox" id="2q4" value="3">经理</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q5" value="4">处理采购入库申请</label>
+                                                    <label><input type="checkbox" id="2q5" value="4">系统管理员</label>
                                                 </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q6" value="5">最终处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q7" value="6">提交报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q8" value="">处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q9" value="">最终处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q10" value="">修改工夹具基础信息</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q11" value="">创建和修改工夹具类别</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q12" value="">添加或删除用户</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="2q13" value="">更改用户权限</label>
-                                                </div>
+
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="submit" onclick="onclk10()" class="btn-apply" style="color: darkslateblue">
@@ -548,22 +297,11 @@
 
                         <!--这里是监管员-->
                         <tr>
-                            <td>监管员</td>
+                            <td id="username3">童雪</td>
 
                             <td>
-                                <p id="3list1"></p>
-                                <p id="3list2"></p>
-                                <p id="3list3"></p>
-                                <p id="3list4"></p>
-                                <p id="3list5">处理采购入库申请</p>
-                                <p id="3list6"></p>
-                                <p id="3list7"></p>
-                                <p id="3list8">处理报废申请</p>
-                                <p id="3list9"></p>
-                                <p id="3list10"></p>
-                                <p id="3list11">创建和修改工夹具类别</p>
-                                <p id="3list12"></p>
-                                <p id="3list13"></p>
+                                <p id="power3">监管员</p>
+
                             </td>
 
 
@@ -580,176 +318,62 @@
 
 
                                             <script>
-                function onclk11() {
+                                                function onclk11() {
 
-                  if (document.getElementById("3q1").checked) {
+                                                    if (document.getElementById("3q1").checked) {
 
-                    document.getElementById("3list1").textContent="出入库操作"
-                  }
-                  if (!(document.getElementById("3q1").checked)) {
+                                                        document.getElementById("power3").textContent = "初级用户"
+                                                    }
 
-                    document.getElementById("3list1").textContent=""
-                  }
+                                                    if (document.getElementById("3q2").checked) {
 
-                  if (document.getElementById("3q2").checked) {
-
-                    document.getElementById("3list2").textContent="提交报修申请"
-                  }
-                  if (!(document.getElementById("3q2").checked)) {
-
-                    document.getElementById("3list2").textContent=""
-                  }
-
-                  if (document.getElementById("3q3").checked) {
-
-                    document.getElementById("3list3").textContent="处理报修申请"
-                  }
-                  if (!(document.getElementById("3q3").checked)) {
-
-                    document.getElementById("3list3").textContent=""
-                  }
+                                                        document.getElementById("power3").textContent = "高级用户"
+                                                    }
 
 
-                  if (document.getElementById("3q4").checked) {
+                                                    if (document.getElementById("3q3").checked) {
 
-                    document.getElementById("3list4").textContent="提交采购入库申请"
-                  }
-                  if (!(document.getElementById("3q4").checked)) {
-
-                    document.getElementById("3list4").textContent=""
-                  }
+                                                        document.getElementById("power3").textContent = "监管员"
+                                                    }
 
 
-                  if (document.getElementById("3q5").checked) {
 
-                    document.getElementById("3list5").textContent="处理采购入库申请"
-                  }
-                  if (!(document.getElementById("3q5").checked)) {
+                                                    if (document.getElementById("3q4").checked) {
 
-                    document.getElementById("3list5").textContent=""
-                  }
+                                                        document.getElementById("power3").textContent = "经理"
+                                                    }
 
 
-                  if (document.getElementById("3q6").checked) {
 
-                    document.getElementById("3list6").textContent="最终处理采购入库申请"
-                  }
-                  if (!(document.getElementById("3q6").checked)) {
+                                                    if (document.getElementById("3q5").checked) {
 
-                    document.getElementById("3list6").textContent=""
-                  }
-
-                  if (document.getElementById("3q7").checked) {
-
-                    document.getElementById("3list7").textContent="提交报废申请"
-                  }
-                  if (!(document.getElementById("3q7").checked)) {
-
-                    document.getElementById("3list7").textContent=""
-                  }
+                                                        document.getElementById("power3").textContent = "系统管理员"
+                                                    }
 
 
-                  if (document.getElementById("3q8").checked) {
-
-                    document.getElementById("3list8").textContent="处理报废申请"
-                  }
-                  if (!(document.getElementById("3q8").checked)) {
-
-                    document.getElementById("3list8").textContent=""
-                  }
 
 
-                  if (document.getElementById("3q9").checked) {
 
-                    document.getElementById("3list9").textContent="最终处理报废申请"
-                  }
-                  if (!(document.getElementById("3q9").checked)) {
-
-                    document.getElementById("3list9").textContent=""
-                  }
-
-
-                  if (document.getElementById("3q10").checked) {
-
-                    document.getElementById("3list10").textContent="修改工夹具基础信息"
-                  }
-                  if (!(document.getElementById("3q10").checked)) {
-
-                    document.getElementById("3list10").textContent=""
-                  }
-
-                  if (document.getElementById("3q11").checked) {
-
-                    document.getElementById("3list11").textContent="创建和修改工夹具类别"
-                  }
-                  if (!(document.getElementById("3q11").checked)) {
-
-                    document.getElementById("3list11").textContent=""
-                  }
-
-
-                  if (document.getElementById("3q12").checked) {
-
-                    document.getElementById("3list12").textContent="添加或删除用户"
-                  }
-                  if (!(document.getElementById("3q12").checked)) {
-
-                    document.getElementById("3list12").textContent=""
-                  }
-
-
-                  if (document.getElementById("3q13").checked) {
-
-                    document.getElementById("3list13").textContent="更改用户权限"
-                  }
-                  if (!(document.getElementById("3q13").checked)) {
-
-                    document.getElementById("3list13").textContent=""
-                  }
-
-                }
+                                                }
                                             </script>
 
                                             <div class="modal-body">
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q1" value="0">进出库管理</label>
+                                                    <label><input type="checkbox" id="3q1" value="0">初级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q2" value="1">提交报修申请</label>
+                                                    <label><input type="checkbox" id="3q2" value="1">高级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q3" value="2">处理报修申请</label>
+                                                    <label><input type="checkbox" id="3q3" value="2">监管员</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q4" value="3">提交采购入库申请</label>
+                                                    <label><input type="checkbox" id="3q4" value="3">经理</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q5" value="4">处理采购入库申请</label>
+                                                    <label><input type="checkbox" id="3q5" value="4">系统管理员</label>
                                                 </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q6" value="5">最终处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q7" value="6">提交报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q8" value="">处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q9" value="">最终处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q10" value="">修改工夹具基础信息</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q11" value="">创建和修改工夹具类别</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q12" value="">添加或删除用户</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="3q13" value="">更改用户权限</label>
-                                                </div>
+
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="submit" onclick="onclk11()" class="btn-apply" style="color: darkslateblue">
@@ -778,21 +402,10 @@
 
                         <!--这里是经理-->
                         <tr>
-                            <td>经理</td>
+                            <td id="usernam4">孙娜恩</td>
                             <td>
-                                <p id="4list1"></p>
-                                <p id="4list2"></p>
-                                <p id="4list3"></p>
-                                <p id="4list4"></p>
-                                <p id="4list5"></p>
-                                <p id="4list6">最终处理采购入库申请</p>
-                                <p id="4list7"></p>
-                                <p id="4list8"></p>
-                                <p id="4list9">最终处理报废申请</p>
-                                <p id="4list10"></p>
-                                <p id="4list11"></p>
-                                <p id="4list12"></p>
-                                <p id="4list13"></p>
+                                <p id="power4">经理</p>
+
                             </td>
 
 
@@ -809,176 +422,61 @@
 
 
                                             <script>
-                  function onclk12() {
+                                                function onclk12() {
 
-                    if (document.getElementById("4q1").checked) {
+                                                    if (document.getElementById("4q1").checked) {
 
-                      document.getElementById("4list1").textContent="出入库操作"
-                    }
-                    if (!(document.getElementById("4q1").checked)) {
+                                                        document.getElementById("power4").textContent = "初级用户"
+                                                    }
 
-                      document.getElementById("4list1").textContent=""
-                    }
+                                                    if (document.getElementById("4q2").checked) {
 
-                    if (document.getElementById("4q2").checked) {
-
-                      document.getElementById("4list2").textContent="提交报修申请"
-                    }
-                    if (!(document.getElementById("4q2").checked)) {
-
-                      document.getElementById("4list2").textContent=""
-                    }
-
-                    if (document.getElementById("4q3").checked) {
-
-                      document.getElementById("4list3").textContent="处理报修申请"
-                    }
-                    if (!(document.getElementById("4q3").checked)) {
-
-                      document.getElementById("4list3").textContent=""
-                    }
+                                                        document.getElementById("power4").textContent = "高级用户"
+                                                    }
 
 
-                    if (document.getElementById("4q4").checked) {
+                                                    if (document.getElementById("4q3").checked) {
 
-                      document.getElementById("4list4").textContent="提交采购入库申请"
-                    }
-                    if (!(document.getElementById("4q4").checked)) {
-
-                      document.getElementById("4list4").textContent=""
-                    }
+                                                        document.getElementById("power4").textContent = "监管员"
+                                                    }
 
 
-                    if (document.getElementById("4q5").checked) {
 
-                      document.getElementById("4list5").textContent="处理采购入库申请"
-                    }
-                    if (!(document.getElementById("4q5").checked)) {
+                                                    if (document.getElementById("4q4").checked) {
 
-                      document.getElementById("4list5").textContent=""
-                    }
+                                                        document.getElementById("power4").textContent = "经理"
+                                                    }
 
 
-                    if (document.getElementById("4q6").checked) {
 
-                      document.getElementById("4list6").textContent="最终处理采购入库申请"
-                    }
-                    if (!(document.getElementById("4q6").checked)) {
+                                                    if (document.getElementById("4q5").checked) {
 
-                      document.getElementById("4list6").textContent=""
-                    }
-
-                    if (document.getElementById("4q7").checked) {
-
-                      document.getElementById("4list7").textContent="提交报废申请"
-                    }
-                    if (!(document.getElementById("4q7").checked)) {
-
-                      document.getElementById("4list7").textContent=""
-                    }
+                                                        document.getElementById("power4").textContent = "系统管理员"
+                                                    }
 
 
-                    if (document.getElementById("4q8").checked) {
-
-                      document.getElementById("4list8").textContent="处理报废申请"
-                    }
-                    if (!(document.getElementById("4q8").checked)) {
-
-                      document.getElementById("4list8").textContent=""
-                    }
 
 
-                    if (document.getElementById("4q9").checked) {
 
-                      document.getElementById("4list9").textContent="最终处理报废申请"
-                    }
-                    if (!(document.getElementById("4q9").checked)) {
-
-                      document.getElementById("4list9").textContent=""
-                    }
-
-
-                    if (document.getElementById("4q10").checked) {
-
-                      document.getElementById("4list10").textContent="修改工夹具基础信息"
-                    }
-                    if (!(document.getElementById("4q10").checked)) {
-
-                      document.getElementById("4list10").textContent=""
-                    }
-
-                    if (document.getElementById("4q11").checked) {
-
-                      document.getElementById("4list11").textContent="创建和修改工夹具类别"
-                    }
-                    if (!(document.getElementById("4q11").checked)) {
-
-                      document.getElementById("4list11").textContent=""
-                    }
-
-
-                    if (document.getElementById("4q12").checked) {
-
-                      document.getElementById("4list12").textContent="添加或删除用户"
-                    }
-                    if (!(document.getElementById("4q12").checked)) {
-
-                      document.getElementById("4list12").textContent=""
-                    }
-
-
-                    if (document.getElementById("4q13").checked) {
-
-                      document.getElementById("4list13").textContent="更改用户权限"
-                    }
-                    if (!(document.getElementById("4q13").checked)) {
-
-                      document.getElementById("4list13").textContent=""
-                    }
-
-                  }
+                                                }
                                             </script>
 
 
                                             <div class="modal-body">
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q1" value="0">进出库管理</label>
+                                                    <label><input type="checkbox" id="4q1" value="0">初级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q2" value="1">提交报修申请</label>
+                                                    <label><input type="checkbox" id="4q2" value="1">高级用户</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q3" value="2">处理报修申请</label>
+                                                    <label><input type="checkbox" id="4q3" value="2">监管员</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q4" value="3">提交采购入库申请</label>
+                                                    <label><input type="checkbox" id="4q4" value="3">经理</label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q5" value="4">处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q6" value="5">最终处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q7" value="6">提交报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q8" value="">处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q9" value="">最终处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q10" value="">修改工夹具基础信息</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q11" value="">创建和修改工夹具类别</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q12" value="">添加或删除用户</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="4q13" value="">更改用户权限</label>
+                                                    <label><input type="checkbox" id="4q5" value="4">系统管理员</label>
                                                 </div>
                                             </div>
 
@@ -1011,219 +509,7 @@
 
 
                         <!--这里是系统管理员-->
-                        <tr>
-                            <td>系统管理员</td>
-                            <td>
-                                <p id="5list1"></p>
-                                <p id="5list2"></p>
-                                <p id="5list3">处理报修申请</p>
-                                <p id="5list4">提交采购入库申请</p>
-                                <p id="5list5"></p>
-                                <p id="5list6"></p>
-                                <p id="5list7">提交报废申请</p>
-                                <p id="5list8"></p>
-                                <p id="5list9"></p>
-                                <p id="5list10">修改工夹具基础信息</p>
-                                <p id="5list11"></p>
-                                <p id="5list12"></p>
-                                <p id="5list13"></p>
-                            </td>
 
-                            <td>
-                                <a href="user_power2.html" data-toggle="modal" data-target="#myModal6">修改</a>
-                                <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content" style="width:80%">
-                                            <div class="modal-header">
-                                                <p class="modal-title" style="font-size: 20px ;color:darkslateblue" id="myModalLabel6">
-                                                    修改用户权限(按Esc退出）
-                                                </p>
-                                            </div>
-
-
-                                            <script>
-                  function onclk13() {
-
-                    if (document.getElementById("5q1").checked) {
-
-                      document.getElementById("5list1").textContent="出入库操作"
-                    }
-                    if (!(document.getElementById("5q1").checked)) {
-
-                      document.getElementById("5list1").textContent=""
-                    }
-
-                    if (document.getElementById("5q2").checked) {
-
-                      document.getElementById("5list2").textContent="提交报修申请"
-                    }
-                    if (!(document.getElementById("5q2").checked)) {
-
-                      document.getElementById("5list2").textContent=""
-                    }
-
-                    if (document.getElementById("5q3").checked) {
-
-                      document.getElementById("5list3").textContent="处理报修申请"
-                    }
-                    if (!(document.getElementById("5q3").checked)) {
-
-                      document.getElementById("5list3").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q4").checked) {
-
-                      document.getElementById("5list4").textContent="提交采购入库申请"
-                    }
-                    if (!(document.getElementById("5q4").checked)) {
-
-                      document.getElementById("5list4").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q5").checked) {
-
-                      document.getElementById("5list5").textContent="处理采购入库申请"
-                    }
-                    if (!(document.getElementById("5q5").checked)) {
-
-                      document.getElementById("5list5").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q6").checked) {
-
-                      document.getElementById("5list6").textContent="最终处理采购入库申请"
-                    }
-                    if (!(document.getElementById("5q6").checked)) {
-
-                      document.getElementById("5list6").textContent=""
-                    }
-
-                    if (document.getElementById("5q7").checked) {
-
-                      document.getElementById("5list7").textContent="提交报废申请"
-                    }
-                    if (!(document.getElementById("5q7").checked)) {
-
-                      document.getElementById("5list7").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q8").checked) {
-
-                      document.getElementById("5list8").textContent="处理报废申请"
-                    }
-                    if (!(document.getElementById("5q8").checked)) {
-
-                      document.getElementById("5list8").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q9").checked) {
-
-                      document.getElementById("5list9").textContent="最终处理报废申请"
-                    }
-                    if (!(document.getElementById("5q9").checked)) {
-
-                      document.getElementById("5list9").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q10").checked) {
-
-                      document.getElementById("5list10").textContent="修改工夹具基础信息"
-                    }
-                    if (!(document.getElementById("5q10").checked)) {
-
-                      document.getElementById("5list10").textContent=""
-                    }
-
-                    if (document.getElementById("5q11").checked) {
-
-                      document.getElementById("5list11").textContent="创建和修改工夹具类别"
-                    }
-                    if (!(document.getElementById("5q11").checked)) {
-
-                      document.getElementById("5list11").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q12").checked) {
-
-                      document.getElementById("5list12").textContent="添加或删除用户"
-                    }
-                    if (!(document.getElementById("5q12").checked)) {
-
-                      document.getElementById("5list12").textContent=""
-                    }
-
-
-                    if (document.getElementById("5q13").checked) {
-
-                      document.getElementById("5list13").textContent="更改用户权限"
-                    }
-                    if (!(document.getElementById("5q13").checked)) {
-
-                      document.getElementById("5list13").textContent=""
-                    }
-
-                  }
-                                            </script>
-
-
-                                            <div class="modal-body">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q1" value="0">进出库管理</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q2" value="1">提交报修申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q3" value="2">处理报修申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q4" value="3">提交采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q5" value="4">处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q6" value="5">最终处理采购入库申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q7" value="6">提交报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q8" value="">处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q9" value="">最终处理报废申请</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q10" value="">修改工夹具基础信息</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q11" value="">创建和修改工夹具类别</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q12" value="">添加或删除用户</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="5q13" value="">更改用户权限</label>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="submit" onclick="onclk13()" class="btn-apply" style="color: darkslateblue">
-                                                    确定
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

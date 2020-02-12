@@ -40,7 +40,7 @@
                     <li class="text_head">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="" id="greet">Hi, 张三</div>
+                            <div class="" id="greet">Hi, @ViewBag.UsrName</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="profile.html" class="dropdown-item has-icon">
@@ -69,7 +69,7 @@
                             <img alt="image" src="../../dist/img/avatar/avatar-1.jpeg" id="user_img">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name" id="username">张三</div>
+                            <div class="user-name" id="username">@ViewBag.UsrName</div>
                             <div class="user-role" id="role">
                                 初级用户
                             </div>
@@ -127,89 +127,55 @@
             <form class="section-body" method="POST">
 
 
-                <p class="text01">INFORMATION</p>
+                <p class="text01">报修信息填写</p>
                 <p class="contenter">>- - - - - - - - - -  </p>
-
-                <div class="row">
-
-
-                    <div class="row1">
-                        <a class="text1" style="color:#574B90"> 时间</a>
-                        <input class="input01" id="time" type="text" name="time" tabindex="2" required>
-                        <a class="text1" style="color:#574B90">记录人</a>
-                        <input class="input01" id="record_user" name="record_user" tabindex="2" required>
-                    </div>
-
-
-                    <div class="row2">
-                        <label class="text1" style="color:#574B90"> 代码</label>
-
-                        <input class="input01" id="tool_code" type="text" name="tool_code" tabindex="2" required>
-                        <a class="text1" style="color:#574B90">Model</a>
-                        <input class="input01" id="tool_model" type="text" name="tool_model" tabindex="2" required>
-                    </div>
-
-
-                    <div class="row3">
-                        <a class="text1" style="color:#574B90">库位</a>
-                        <input class="input01" id="tool_location" type="text" name="tool_location" tabindex="2" required>
-                        <a class="text1" style="color:#574B90">Partno</a>
-                        <input class="input01" id="tool_partno" type="text" name="tool_partno" tabindex="2" required>
-                    </div>
-
-                    <div class="row4">
-                        <a class="text1" style="color:#574B90">产线</a>
-                        <input class="input01" id="produce_line" type="text" name="produce_line" tabindex="2" required>
-                        <a class="text1" style="color:#574B90">Family</a>
-                        <input class="input01" id="tool_family" type="text" tabindex="2" name="tool_family" required>
-                    </div>
-
-
-                    <div class="row5">
-                        <a class="text1" style="color:#574B90">名称</a>
-                        <input class="input01" id="tool_name" type="text" name="tool_name" tabindex="2" required>
-                        <a class="text1" style="color:#574B90">经手人</a>
-                        <input class="input01" id="rent_user" type="text" name="rent_user" tabindex="2" required>
-                    </div>
-
+                <div class="table-responsive">
+                    <table class="table" style="position: absolute;width:40%;top:25%;left: 28%;">
+                        <thead>
+                            <tr style="">
+                                <th style="width:30%;">信息</th>
+                                <th>输入</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:#574B90 ">申请人</td>
+                                <td> <input class="" style="width:20%;	" id="applicator" type="text" name="time" tabindex="2" required></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">物品代码</td>
+                                <td> <input style="width:50%" id="tool_code" type="text" name="tool_code" tabindex="2" required></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">故障照片</td>
+                                <td>  <label class="sr-only" for="inputfile">文件输入</label> <input type="file" id="inputfile" name="inputfile"></td>
+                            </tr>
+                            <tr>
+                                <td style="color:#574B90 ">故障描述(请描述故障原因、故障情况等）</td>
+                                <td>
+                                    <textarea style="width:60%;height: 180px" id="description" name="description" tabindex="2" required>
+          </textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <script>
-        function onclk2()
-
-        {
-
-
-          if(isNaN(document.getElementById("time").value) && isNaN(document.getElementById("record_user").value) && isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("tool_model").value) && isNaN(document.getElementById("tool_location").value) && isNaN(document.getElementById("tool_partno").value) && isNaN(document.getElementById("tool_family").value) && isNaN(document.getElementById("produce_line").value) && isNaN(document.getElementById("tool_name").value) && isNaN(document.getElementById("rent_user").value))
-
-          {
-            alert("提交成功");
-          }
-          else
-          {
-            alert("请填写完整信息")
-          }
-
-
-
-
-
-
-
-        }
-
+                        function onclk3() {
+                            if (isNaN(document.getElementById("applicator").value) && isNaN(document.getElementById("tool_code").value) && isNaN(document.getElementById("inputfile").value) && isNaN(document.getElementById("description").value)) {
+                                alert("故障信息提交成功");
+                            }
+                            else {
+                                alert("请填写完整信息")
+                            }
+                        }
                     </script>
 
-                    <div class="btn01">
-                        <button type="submit" class="btn btn-primary btn-block" tabindex="4" onclick="onclk2()">
+                    <div class="btn02">
+                        <button type="submit" class="btn btn-primary btn-block" tabindex="4" onclick="onclk3()">
                             提交
                         </button>
                     </div>
-
-
-
-
-
-
                 </div>
 
             </form>
