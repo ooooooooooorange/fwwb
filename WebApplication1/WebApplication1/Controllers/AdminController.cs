@@ -44,7 +44,6 @@ namespace WebApplication1.Controllers
         /// <returns>返回成功或失败，若失败，带有相关信息</returns>
         public ActionResult AddUser(int user_type, string username, string password)
         {
-            Models.User usr=new 
             //TODO:添加用户的操作以及设置返回信息
             Models.User usr = new Models.User
             {
