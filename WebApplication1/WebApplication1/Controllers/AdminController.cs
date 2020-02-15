@@ -46,6 +46,12 @@ namespace WebApplication1.Controllers
         {
             Models.User usr=new 
             //TODO:添加用户的操作以及设置返回信息
+            Models.User usr = new Models.User
+            {
+                type = (Models.UserType)Enum.Parse(typeof(Models.UserType), "" + user_type),
+                name=username,
+                password=password,
+            };
             return null;
         }
         /// <summary>

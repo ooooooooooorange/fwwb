@@ -11,31 +11,74 @@ namespace WebApplication1.Controllers
         // GET: OperatorII
         public ActionResult Index(string name)
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         public ActionResult BoughtAsk()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
+        /// <summary>
+        /// TODO:需通过数据库生成相应的请求列表
+        /// </summary>
+        /// <returns></returns>
         public ActionResult RepairDeal()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
+            List<string> list = new List<string> { "吴亦凡","吴世勋","鹿晗","朴灿烈",
+                "张艺兴","艾琳","朴秀荣","林允儿","徐贤","郑秀晶",};
+            ViewBag.RepDealNames = list;
+
             return View();
         }
         public ActionResult ScrapAsk()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
+        /// <summary>
+        /// TODO:需通过数据库生成相应的请求列表
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ToolInformation()
         {
-            return View();
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
+            List<string> list = new List<string> { "LM2132 - 1","LM2132 - 2",
+                "LM2132 - 3","LM2132 - 4","LM2132 - 5",};
+            ViewBag.ToolIDs = list;
+
+            return View(); 
+
         }
         /// <summary>
         /// 采购入库申请处理
         /// </summary>
         /// <returns></returns>
-        public ActionResult BoughtAct()//参数出字符串外，需考虑文件（照片）的传输
+        public ActionResult BoughtAct(string applicator, string date, string class_code,//疑问：类别代码是？
+            string tool_code, HttpFileCollection http_file )//参数出字符串外，需考虑文件（照片）的传输
         {
-            
+            //TODO:处理采购请求
+            Models.ReqInfo req = new Models.PurchaseReq
+            {
+                applicant=applicator,
+                date=DateTime.Parse(date),
+                fid=class_code,
+                tool=new Models.Tool
+                {
+                    code =tool_code,
+                }
+            };
             return View();
         }
         /// <summary>
@@ -50,8 +93,19 @@ namespace WebApplication1.Controllers
         /// 报废申请
         /// </summary>
         /// <returns></returns>
-        public ActionResult ScrapReqAct()//商量：似乎也应该有照片
+        public ActionResult ScrapReqAct(string applicator, string tool_code, string lifespan,
+            string reason)//商量：似乎也应该有照片
         {
+            //TODO:处理报废请求
+            Models.ReqInfo req = new Models.ScrapReq
+            {
+                applicant=applicator,
+                reason=reason,
+                tool=new Models.Tool
+                {
+                    code=tool_code,
+                }
+            };
             return View();
         }
         /// <summary>

@@ -35,8 +35,14 @@ namespace WebApplication1.Controllers
         /// 创建工夹具类别（可用于修改？）
         /// </summary>
         /// <returns></returns>
-        public ActionResult CreatClass()
+        public ActionResult CreatFixture(string name)
         {
+            //商量：除名字外，应该同时填写绝大部分类别信息
+            //TODO：创建相应工夹具类别
+            Models.Fixture fixture = new Models.Fixture
+            {
+                name = name,
+            };
             return View();
         }
         /// <summary>

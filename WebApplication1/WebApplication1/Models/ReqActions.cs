@@ -208,6 +208,10 @@ namespace WebApplication1.Models
         {
 
         }
+        public ScrapReq() : base()
+        {
+
+        }
         public override void Access(string actor)
         {
             throw new NotImplementedException();
