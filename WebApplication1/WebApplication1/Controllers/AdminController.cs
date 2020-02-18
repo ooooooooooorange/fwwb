@@ -31,8 +31,20 @@ namespace WebApplication1.Controllers
             //TODO:获取该用户下辖的所有用户信息
             return View();
         }
+        
         public ActionResult Power()
         {
+            /*注意：此处应至少包含角色数据有：姓名，角色列表，唯一标识符（用户ID）*/
+            List<KeyValuePair<string,int[]>> user_pair = new List<KeyValuePair<string, int[]>>
+            {
+                new KeyValuePair<string,int[]>("张三",new int[]{ 1}),
+                new KeyValuePair<string,int[]>("李四",new int[]{ 2}),
+                new KeyValuePair<string,int[]>("王五",new int[]{ 3}),
+                new KeyValuePair<string,int[]>("赵六",new int[]{ 4}),
+            };
+            
+            ViewBag.UserPair = user_pair;
+
             return null;
         }
         /// <summary>
