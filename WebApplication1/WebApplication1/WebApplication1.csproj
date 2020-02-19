@@ -187,6 +187,26 @@
     <Content Include="Content\skins\darksidebar.css" />
     <Content Include="Content\skins\deeppurple.css" />
     <Content Include="Content\skins\lightblue.css" />
+    <Content Include="dist\exp2\css\bootstrap.min.css" />
+    <Content Include="dist\exp2\css\style.css" />
+    <Content Include="dist\exp2\img\add_two.png" />
+    <Content Include="dist\exp2\js\bootbox.min.js" />
+    <Content Include="dist\exp2\js\bootstrap.min.js" />
+    <Content Include="dist\exp2\js\jquery-1.10.2.js" />
+    <Content Include="dist\exp2\js\mejs.js" />
+    <Content Include="dist\exp\css\reponse.css" />
+    <Content Include="dist\exp\js\jquery-1.11.3.min.js" />
+    <Content Include="dist\exp\js\jquery.basictable.min.js" />
+    <Content Include="dist\exp\layer\layer.js" />
+    <Content Include="dist\exp\layer\theme\default\icon-ext.png" />
+    <Content Include="dist\exp\layer\theme\default\icon.png" />
+    <Content Include="dist\exp\layer\theme\default\layer.css" />
+    <Content Include="dist\exp\layer\theme\default\loading-0.gif" />
+    <Content Include="dist\exp\layer\theme\default\loading-1.gif" />
+    <Content Include="dist\exp\layer\theme\default\loading-2.gif" />
+    <Content Include="dist\img\slider\05.png" />
+    <Content Include="dist\img\slider\06.png" />
+    <Content Include="dist\img\slider\07.png" />
     <Content Include="dist\style.css" />
     <Content Include="dist\css\custom.css" />
     <Content Include="dist\css\demo.css" />
@@ -3297,6 +3317,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <None Include="Views\Sessions与ViewBag说明.md" />
+    <Content Include="dist\reponsetable.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
