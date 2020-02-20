@@ -34,6 +34,7 @@ namespace WebApplication1.Controllers
             ViewBag.UsrName = ((Models.User)obj).name;//用户名
             List<string> list = new List<string> { "吴亦凡","吴世勋","鹿晗","朴灿烈",
                 "张艺兴","艾琳","朴秀荣","林允儿","徐贤","郑秀晶",};
+
             ViewBag.RepDealNames = list;
 
             return View();

@@ -10,14 +10,37 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
     <title>捷普科技 &mdash; 工夹具管理系统</title>
 
-    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
 
-    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
-    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="../dist/css/demo.css">
-    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../dist/css/demo.css">
+    <link rel="stylesheet" href="../../dist/css/style.css">
+
+
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../dist/exp/layer/theme/default/layer.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/exp/css/reponse.css">
+    <style type="text/css">
+        .alertceng {
+            background: #FFFFFF;
+            padding: 10px;
+            display: none;
+        }
+
+            .alertceng span.title {
+                margin-right: 10px;
+            }
+    </style>
+
+
+
+
 </head>
 
 <body>
@@ -33,7 +56,7 @@
                     <li class="text_head">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="" id="greet">Hi, 李四</div>
+                            <div class="" id="greet">Hi,  @ViewBag.UsrName</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="profile.html" class="dropdown-item has-icon">
@@ -59,10 +82,10 @@
                     </div>
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
-                            <img alt="image" src="../dist/img/avatar/avatar-2.jpeg" id="user_img">
+                            <img alt="image" src="../../dist/img/avatar/avatar-2.jpeg" id="user_img">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name" id="username">李四</div>
+                            <div class="user-name" id="username"> @ViewBag.UsrName</div>
                             <div class="user-role" id="role">
                                 高级用户
                             </div>
@@ -72,20 +95,20 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Welcome</li>
                         <li class="active">
-                            <a href="index02.html"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
+                            <a href="Index"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
                         </li>
                         <li class="menu-header">FUNCTION</li>
                         <li>
-                            <a href="bought_ask.html"><i class="ion ion-flag"></i><span>采购入库</span></a>
+                            <a href="BoughtAsk"><i class="ion ion-flag"></i><span>采购入库</span></a>
                         </li>
                         <li>
-                            <a href="repair_deal.html"><i class="ion ion-clipboard"></i><span>报修申请</span></a>
+                            <a href="RepairDeal"><i class="ion ion-clipboard"></i><span>报修申请</span></a>
                         </li>
                         <li>
-                            <a href="scrap_ask.html"><i class="ion ion-clipboard"></i><span>报废申请</span></a>
+                            <a href="ScrapAsk"><i class="ion ion-clipboard"></i><span>报废申请</span></a>
                         </li>
                         <li>
-                            <a href="tool_information.html"><i class="ion ion-ios-copy-outline"></i><span>工夹具基础信息</span></a>
+                            <a href="ToolInformation"><i class="ion ion-ios-copy-outline"></i><span>工夹具基础信息</span></a>
                         </li>
                     </ul>
                 </aside>
@@ -97,7 +120,16 @@
             <p class="contenter1">>- - - - - - - - - - </p>
 
 
-            <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 25%">
+
+
+
+
+
+
+
+
+
+            <!--    <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 25%">
                 <thead>
                     <tr>
                         <th>申请人</th>
@@ -105,131 +137,133 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-
-
-                        <td id="applicator">吴亦凡</td>
-                        <script>
-          function ondate()
-          {
-            document.getElementById("applicator").textContent=""
-            document.getElementById("manage").textContent=""
-          }
-
-                        </script>
 
 
 
-                        <td id="manage">
-                            <a href="#" data-toggle="modal" data-target="#Modal" style="color:#0087cb">查看</a>
-                            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content" style="width:100%">
-                                        <div class="modal-header">
-                                            <p class="modal-title" style="font-size: 20px ;color:darkslateblue" id="ModalLabel">
-                                                采购入库信息
-                                            </p>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82; width:85%;background-color:lavender">申请人</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;" id="applyname">徐明浩</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; margin-top: 8px;background-color:lavender">类别代码</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;" id="class_coode">BFC SQ 2218</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">物品代码</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82" id="tool_coode">LM2132-3</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">采购入库单号</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82" id="doc_num">JB0-3216</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">采购入库日期</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82" id="data">2019/1/26</p>
-                                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;width:85%; background-color:lavender">物品照片</p>
-                                            <img src='../dist/img/avatar/08.png' style="font-size:18px ;margin-left: 20px;color: #4b3f82;;width:70%" id="inputfile1">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" data-toggle="modal" data-target="#Modal2" style="color:mediumseagreen">同意</a>
-                            <a href="#" style=" color:red " onclick="ondate()">删除 </a>
-                        </td>
 
-                    </tr>
 
                     <tr>
-                        <td>吴世勋</td>
+                        <td id="applicator">@ViewBag.RepDealNames[0]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
+                            <a  href="#" style=" color:red " onclick="ondate()">删除 </a>
                         </td>
                     </tr>
+
+
+
                     <tr>
-                        <td>鹿晗</td>
+                        <td>@ViewBag.RepDealNames[1]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
+
                     <tr>
-                        <td>朴灿烈</td>
+                        <td>@ViewBag.RepDealNames[2]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
+
                     <tr>
-                        <td>张艺兴</td>
+                        <td>@ViewBag.RepDealNames[3]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
                     <tr>
-                        <td>艾琳</td>
+                        <td>@ViewBag.RepDealNames[4]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
                     <tr>
-                        <td>朴秀荣</td>
+                        <td>@ViewBag.RepDealNames[5]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
                     <tr>
-                        <td>林允儿</td>
+                        <td>@ViewBag.RepDealNames[6]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
                     <tr>
-                        <td>徐贤</td>
+                        <td>@ViewBag.RepDealNames[7]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
                     <tr>
-                        <td>郑秀晶</td>
+                        <td>@ViewBag.RepDealNames[8]</td>
                         <td>
                             <a style="color:#0087cb">查看</a>
                             <a style="color:mediumseagreen">同意</a>
                             <a style=" color:red">删除 </a>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td>@ViewBag.RepDealNames[9]</td>
+                        <td>
+                            <a style="color:#0087cb">查看</a>
+                            <a style="color:mediumseagreen">同意</a>
+                            <a style=" color:red">删除 </a>
+                        </td>
+                    </tr>
+
+
+
                 </tbody>
-            </table>
+            </table>-->
 
 
+            <div style="background: #fff;width:50%;position:absolute;top:23%;left: 25%">
+                <div id="page">
+                    <div class="btn-container">
+                        <button class="layui-btn" onclick="ExportExcel();">导出Excel</button>
+                        
 
+
+                    </div>
+                    <table id="table" class="reponsetable"></table>
+                    <script type="text/html" id="editer">
+                        <a href="#" style="color:mediumseagreen" onclick="edittr(this)">查看</a>
+                        <a href="#" style="color: crimson" onclick="deletetr(this)">删除</a>
+                        <a href="#" style="color: #0087cb" onclick="uptr(this)">上移</a>
+                        <a href="#" style="color: #0087cb" onclick="downtr(this)">下移</a>
+                    </script>
+                </div>
+            </div>
+            <div id="editcontent" class="alertceng">
+                <p><span class="title">申请人:</span><input type="text" id="Name" /></p>
+                <p><span class="title">申请时间:</span><input type="text" id="Time" /></p>
+
+            </div>
 
 
 
@@ -243,56 +277,135 @@
         </div>
     </div>
 
-    <script src="../dist/modules/jquery.min.js"></script>
-    <script src="../dist/modules/popper.js"></script>
-    <script src="../dist/modules/tooltip.js"></script>
-    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-    <script src="../dist/js/sa-functions.js"></script>
+    <script src="../../dist/modules/jquery.min.js"></script>
+    <script src="../../dist/modules/popper.js"></script>
+    <script src="../../dist/modules/tooltip.js"></script>
+    <script src="../../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../../dist/js/sa-functions.js"></script>
 
-    <script src="../dist/modules/chart.min.js"></script>
-    <script src="../dist/modules/summernote/summernote-lite.js"></script>
+    <script src="../../dist/modules/chart.min.js"></script>
+    <script src="../../dist/modules/summernote/summernote-lite.js"></script>
+
+
+
+    <script src="../../dist/exp/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../dist/exp/js/jquery.basictable.min.js"></script>
+    <script type="text/javascript" src="../../dist/reponsetable.min.js"></script>
+    <script type="text/javascript" src="../../dist/exp/layer/layer.js"></script>
+
+
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            $('#table').basictable({
+                breakpoint: 768
+            });
+
+            $("#table").reponsetable({
+                "id": "table",
+                "operation": "editer",
+                "type": "numbers",
+                "colum": [
+                    { "field": "Name", "title": "申请人" },
+                    { "field": "Time", "title": "申请时间" },
+
+                ],
+
+               
+                "data":
+               [
+
+                        { "Name": "@ViewBag.RepDealNames[0]", "Time": "2019/1/2"},
+                        { "Name": "@ViewBag.RepDealNames[1]", "Time": "2019/1/3" },
+                        { "Name": "@ViewBag.RepDealNames[2]", "Time": "2019/1/5"},
+                        { "Name": "@ViewBag.RepDealNames[3]", "Time": "2019/1/8" },
+                        { "Name": "@ViewBag.RepDealNames[4]", "Time": "2019/1/12" },
+                        { "Name": "@ViewBag.RepDealNames[5]", "Time": "2019/1/21" },
+                        { "Name": "@ViewBag.RepDealNames[6]", "Time": "2019/2/2"},
+                        { "Name": "@ViewBag.RepDealNames[7]", "Time": "2019/2/4" },
+                        { "Name": "@ViewBag.RepDealNames[8]", "Time": "2019/2/7" },
+                        { "Name": "@ViewBag.RepDealNames[9]", "Time": "2019/2/8"},
+
+         
+
+                
+                ],
+            });
+
+        })
+
+        function uptr(btn, e) {
+            var tr = $(btn).parent().parent();
+            reponse.moveuptr(tr, "table");
+        }
+        function downtr(btn, e) {
+            var tr = $(btn).parent().parent();
+            reponse.moveDown(tr, "table");
+        }
+        function ExportExcel() {
+            var tableobj = $("#table").data("tableObj");
+            reponse.JSONToCSVConvertor(tableobj, true, "人员表格");
+        }
+      
+
+
+        function deletetr(a, e) {
+            var tr = $(a).parent().parent();
+            reponse.deletetr(tr, e);
+        }
+
+    </script>
+
+
+
+
+
+
+
 
     <script>
-  var ctx = document.getElementById("myChart").getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      datasets: [{
-        label: 'Statistics',
-        data: [460, 458, 330, 502, 430, 610, 488],
-        borderWidth: 2,
-        backgroundColor: 'rgb(87,75,144)',
-        borderColor: 'rgb(87,75,144)',
-        borderWidth: 2.5,
-        pointBackgroundColor: '#ffffff',
-        pointRadius: 4
-      }]
-    },
-    options: {
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-            stepSize: 150
-          }
-        }],
-        xAxes: [{
-          gridLines: {
-            display: false
-          }
-        }]
-      },
-    }
-  });
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                datasets: [{
+                    label: 'Statistics',
+                    data: [460, 458, 330, 502, 430, 610, 488],
+                    borderWidth: 2,
+                    backgroundColor: 'rgb(87,75,144)',
+                    borderColor: 'rgb(87,75,144)',
+                    borderWidth: 2.5,
+                    pointBackgroundColor: '#ffffff',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 150
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                },
+            }
+        });
     </script>
-    <script src="../dist/js/scripts.js"></script>
-    <script src="../dist/js/custom.js"></script>
-    <script src="../dist/js/demo.js"></script>
+    <script src="../../dist/js/scripts.js"></script>
+    <script src="../../dist/js/custom.js"></script>
+    <script src="../../dist/js/demo.js"></script>
 </body>
 </html>

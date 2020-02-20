@@ -6,18 +6,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
-    <title>捷普科技 &mdash; 工夹具管理系统</title>
+    
+    <meta charset="utf-8" />
+    <title>>捷普科技 &mdash; 工夹具管理系统</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../../dist/exp2/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../dist/exp2/css/bootstrap.min.css" />
+    <script src="../../dist/exp2/js/jquery-1.10.2.js"></script>
+    <script src="../../dist/exp2/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../dist/exp2/js/bootbox.min.js"></script>
 
-    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
-
-    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
-    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="../dist/css/demo.css">
-    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+     <link rel="stylesheet" href="../../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../dist/css/demo.css">
+    <link rel="stylesheet" href="../../dist/css/style.css">
 </head>
 
 <body>
@@ -33,7 +38,7 @@
                     <li class="text_head">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="" id="greet">Hi, 李真</div>
+                            <div class="" id="greet">Hi,  @ViewBag.UsrName</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="profile.html" class="dropdown-item has-icon">
@@ -59,10 +64,10 @@
                     </div>
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
-                            <img alt="image" src="../dist/img/avatar/07.jpg" id="user_img">
+                            <img alt="image" src="../../dist/img/avatar/avatar-5.jpeg" id="user_img">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name" id="username">李真</div>
+                            <div class="user-name" id="username"> @ViewBag.UsrName</div>
                             <div class="user-role" id="role">
                                 系统管理员
                             </div>
@@ -72,14 +77,14 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Welcome</li>
                         <li class="active">
-                            <a href="index05.html"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
+                            <a href="Index"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
                         </li>
                         <li class="menu-header">FUNCTION</li>
                         <li>
-                            <a href="user_revise.html"><i class="ion ion-clipboard"></i><span>添加/删除用户</span></a>
+                            <a href="UserRevise"><i class="ion ion-clipboard"></i><span>添加/删除用户</span></a>
                         </li>
                         <li>
-                            <a href="user_power.html"><i class="ion ion-clipboard"></i><span>更改用户权限</span></a>
+                            <a href="UserPower"><i class="ion ion-clipboard"></i><span>更改用户权限</span></a>
                         </li>
 
                     </ul>
@@ -89,131 +94,133 @@
 
 
 
-            <p class="text5">用户列表</p>
-            <p class="contenter1">>- - - - - - - - - - - -</p>
-            <button class="btn05" data-toggle="modal" data-target="#myModal">
-                添加新用户
-            </button>
 
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="width:80%">
-                        <div class="modal-header">
-                            <p class="modal-title" style="font-size: 20px ;color:darkslateblue" id="myModalLabel">
-                                添加新用户信息(按Esc退出）
-                            </p>
+
+
+
+            <div class="container content_width">
+                <div class="person_search" style="position:absolute;top:15%;left:15%">
+                    <div class="search_input">
+                        <div class="input-group mb-3">
+                            <span>姓名：</span>
+                            <input id="Ktext" type="text" class="form-control" placeholder="请输入姓名">
                         </div>
-                        <script>
-            function onclk7()
-            {
+                    </div>
+                    <div class="search_input">
+                        <div class="input-group mb-3" hidden>
+                            <span>工号：</span>
+                            <input id="job_num" type="text" class="form-control" placeholder="请输入工号">
+                        </div>
+                    </div>
+                    <div class="search_input">
+                        <button class="btn btn-primary search_btn" type="button" id="search_btn">查询</button>
+                        <button class="btn btn-primary search_btn" type="button" id="back_btn">重置</button>
+                    </div>
+                </div>
 
-              if(isNaN(document.getElementById("username").value) && isNaN(document.getElementById("password").value) )
+            </div>
 
-              {
-                alert("用户信息添加成功");
-              }
-              else
-              {
-                alert("请填写完整用户信息")
-              }
+            <div class="export" style="position:absolute;top:25%;left:15%">
+                <button id="new_add" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#renyuan">
+                    <img src="../../dist/exp2/img/add_two.png" />
+                    <span>添加</span>
+                </button>
+                <div class="modal fade" id="renyuan">
+                    <div class="modal-dialog modal-lg modal_position">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">添加</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <table id="xztb" class="table">
 
-            }
-                        </script>
-                        <form class="modal-body">
-                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82">用户名</p>
-                            <input class="" id="username_new" name="username_new" style=";margin-left: 20px;width:90%">
-                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82; margin-top: 8px">密码(不能为纯数字)</p>
-                            <input class="" id="password" name="password" style="margin-left: 20px;width:90%">
-                            <p class="" style="font-size:18px ;margin-left: 20px;color: #4b3f82;margin-top: 15px">用户类别</p>
-                            <div class="radio" style="font-size: 18px;margin-left:40px">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 初级用户
-                                </label>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tb_bg">
+                                                <label for=""><font style="font-size: 14px; color: red;">*</font>姓名</label>
+                                            </td>
+                                            <td><input class="userName" type="text" placeholder="请输入姓名" /></td>
+                                            <td class="tb_bg">
+                                                <label for=""><font style="font-size: 14px; color: red;">*</font>工号</label>
+                                            </td>
+                                            <td><input class="jobNum" type="number" placeholder="请输入工号" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bg">
+                                                <label for=""><font style="font-size: 14px; color: red;">*</font>手机号</label>
+                                            </td>
+                                            <td><input class="phoneNum" type="number" placeholder="请输入手机号" /></td>
+                                            <td class="tb_bg"><label for="">用户名</label></td>
+                                            <td><input type="text" placeholder="请输入产品名称" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bg"><label for="">用户密码</label></td>
+                                            <td><input type="text" placeholder="请输入用户密码" /></td>
+                                            <td class="tb_bg"><label for="">用户类型</label></td>
+                                            <td>
+                                                <select class="form-control select_down" style="font-size: 13px; color: #666;">
+                                                    <option>初级人员</option>
+                                                    <option>高级人员</option>
+                                                    <option>监管员</option>
+                                                    <option>经理</option>
+                                                    <option>系统管理员</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="radio" style="font-size: 18px;margin-left:40px">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">高级用户
-                                </label>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button id="add_btn" type="button" class="btn btn-secondary">确定</button>
                             </div>
-                            <div class="radio" style="font-size: 18px;margin-left:40px">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> 监管员
-                                </label>
-                            </div>
-                            <div class="radio" style="font-size: 18px;margin-left:40px">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4"> 经理
-                                </label>
-                            </div>
-                            <div class="radio" style="font-size: 18px;margin-left:40px">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5"> 系统管理员
-                                </label>
-                            </div>
-                        </form>
-                        <div class="modal-footer">
-                            <button type="submit" onclick="onclk7()" class="btn-apply" style="color: darkslateblue">
-                                添加新用户
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <script>
-      function ondelete()
-      {
-        document.getElementById("role1").textContent="";
-        document.getElementById("user1").textContent="";
-        document.getElementById("password1").textContent=""
-        ocument.getElementById("delete").textContent=""
-      }
 
-            </script>
-
-            <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 28%">
+            <table id="tb" class="table" style="position:absolute;top:30%;left:15%;width:80%">
                 <thead>
                     <tr>
-                        <th>用户类型</th>
+                        <th>姓名</th>
+                        <th>工号</th>
+                        <th>手机号</th>
                         <th>用户名</th>
-                        <th>密码</th>
+                        <th>用户密码</th>
+                        <th>用户类型</th>
                         <th>操作</th>
                     </tr>
                 </thead>
-                <tbody>
-
+                <tbody id="show_tbody">
                     <tr>
-                        <td id="role1">初级用户</td>
-                        <td id="user1">张三</td>
-                        <td id="password1">zhangsan1123</td>
-                        <td id="delete"> <a href="#" style=" color:red " onclick="ondelete()">删除 </a></td>
-
-                    </tr>
-
-                    <tr>
-                        <td id="role2">高级用户</td>
-                        <td id="user2">李四</td>
-                        <td id="password2">lisi123</td>
-                        <td> <a href="#" style=" color:red ">删除 </a></td>
-                    </tr>
-
-                    <tr>
-                        <td id="role3">监管员</td>
-                        <td id="user3">童雪</td>
-                        <td id="password3">tongxue123</td>
-                        <td> <a href="#" style=" color:red ">删除 </a></td>
+                        <td>刘晓晓</td>
+                        <td>7652101</td>
+                        <td>18086667777</td>
+                        <td>刘晓晓1</td>
+                        <td>liuxiaoxiao123</td>
+                        <td>初级用户</td>
+                        <td>
+                            <a href="#" class="edit">编辑</a>
+                            <a href="#" class="del">删除</a>
+                        </td>
                     </tr>
                     <tr>
-                        <td id="role4">经理</td>
-                        <td id="user4">孙娜恩</td>
-                        <td id="password4">sunnaen123</td>
-                        <td> <a href="#" style=" color:red ">删除 </a></td>
+                        <td>李磊</td>
+                        <td>7652102</td>
+                        <td>18086668888</td>
+                        <td>李磊2</td>
+                        <td>lilei123</td>
+                        <td>高级用户</td>
+                        <td>
+                            <a href="#" class="edit">编辑</a>
+                            <a href="#" class="del">删除</a>
+                        </td>
                     </tr>
-
-
-
                 </tbody>
             </table>
 
+            <script src="../../dist/exp2/js/mejs.js"></script>
 
 
 
@@ -223,57 +230,53 @@
 
         </div>
     </div>
-
-    <script src="../dist/modules/jquery.min.js"></script>
-    <script src="../dist/modules/popper.js"></script>
-    <script src="../dist/modules/tooltip.js"></script>
-    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-    <script src="../dist/js/sa-functions.js"></script>
-
-    <script src="../dist/modules/chart.min.js"></script>
-    <script src="../dist/modules/summernote/summernote-lite.js"></script>
+    <script src="../../dist/exp2/js/mejs.js"></script>
+    <script src="../../dist/modules/jquery.min.js"></script>
+    <script src="../../dist/modules/popper.js"></script>
+    <script src="../../dist/modules/tooltip.js"></script>
+    <script src="../../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../../dist/js/sa-functions.js"></script>
+    <script src="../../dist/modules/chart.min.js"></script>
+    <script src="../../dist/modules/summernote/summernote-lite.js"></script>
 
     <script>
-  var ctx = document.getElementById("myChart").getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      datasets: [{
-        label: 'Statistics',
-        data: [460, 458, 330, 502, 430, 610, 488],
-        borderWidth: 2,
-        backgroundColor: 'rgb(87,75,144)',
-        borderColor: 'rgb(87,75,144)',
-        borderWidth: 2.5,
-        pointBackgroundColor: '#ffffff',
-        pointRadius: 4
-      }]
-    },
-    options: {
-      legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-            stepSize: 150
-          }
-        }],
-        xAxes: [{
-          gridLines: {
-            display: false
-          }
-        }]
-      },
-    }
-  });
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                datasets: [{
+                    label: 'Statistics',
+                    data: [460, 458, 330, 502, 430, 610, 488],
+                    borderWidth: 2,
+                    backgroundColor: 'rgb(87,75,144)',
+                    borderColor: 'rgb(87,75,144)',
+                    borderWidth: 2.5,
+                    pointBackgroundColor: '#ffffff',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 150
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                },
+            }
+        });
     </script>
-    <script src="../dist/js/scripts.js"></script>
-    <script src="../dist/js/custom.js"></script>
-    <script src="../dist/js/demo.js"></script>
 </body>
 </html>

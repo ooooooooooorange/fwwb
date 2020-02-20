@@ -10,14 +10,14 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
     <title>捷普科技 &mdash; 工夹具管理系统</title>
 
-    <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../dist/modules/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
 
-    <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
-    <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="../dist/css/demo.css">
-    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../../dist/modules/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="../../dist/modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../dist/css/demo.css">
+    <link rel="stylesheet" href="../../dist/css/style.css">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
                     <li class="text_head">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
                             <i class="ion ion-android-person d-lg-none"></i>
-                            <div class="" id="greet">Hi, 童雪</div>
+                            <div class="" id="greet">Hi,  @ViewBag.UsrName</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="profile.html" class="dropdown-item has-icon">
@@ -54,10 +54,10 @@
                     </div>
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
-                            <img alt="image" src="../dist/img/avatar/04.jpg" id="user_name">
+                            <img alt="image" src="../../dist/img/avatar/avatar-4.jpeg" id="user_name">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name" id="username">童雪</div>
+                            <div class="user-name" id="username"> @ViewBag.UsrName</div>
                             <div class="user-role" id="role">
                                 监管员
                             </div>
@@ -66,17 +66,17 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Welcome</li>
                         <li class="active">
-                            <a href="index03.html"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
+                            <a href="Index"><i class="ion ion-speedometer"></i><span>HOMEPAGE</span></a>
                         </li>
                         <li class="menu-header">FUNCTION</li>
                         <li>
-                            <a href="class_revise.html"><i class="ion ion-flag"></i><span>创建和修改工夹具类别</span></a>
+                            <a href="ClassRevise"><i class="ion ion-flag"></i><span>创建和修改工夹具类别</span></a>
                         </li>
                         <li>
-                            <a href="bought_deal.html"><i class="ion ion-clipboard"></i><span>采购入库申请</span></a>
+                            <a href="BoughtDeal"><i class="ion ion-clipboard"></i><span>采购入库申请</span></a>
                         </li>
                         <li>
-                            <a href="scrap_deal.html"><i class="ion ion-clipboard"></i><span>报废申请</span></a>
+                            <a href="ScrapDeal"><i class="ion ion-clipboard"></i><span>报废申请</span></a>
                         </li>
                     </ul>
                 </aside>
@@ -210,16 +210,16 @@
         </div>
     </div>
 
-    <script src="../dist/modules/jquery.min.js"></script>
-    <script src="../dist/modules/popper.js"></script>
-    <script src="../dist/modules/tooltip.js"></script>
-    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-    <script src="../dist/js/sa-functions.js"></script>
+    <script src="../../dist/modules/jquery.min.js"></script>
+    <script src="../../dist/modules/popper.js"></script>
+    <script src="../../dist/modules/tooltip.js"></script>
+    <script src="../../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../../dist/js/sa-functions.js"></script>
 
-    <script src="../dist/modules/chart.min.js"></script>
-    <script src="../dist/modules/summernote/summernote-lite.js"></script>
+    <script src="../../dist/modules/chart.min.js"></script>
+    <script src="../../dist/modules/summernote/summernote-lite.js"></script>
 
     <script>
   var ctx = document.getElementById("myChart").getContext('2d');
@@ -258,8 +258,8 @@
     }
   });
     </script>
-    <script src="../dist/js/scripts.js"></script>
-    <script src="../dist/js/custom.js"></script>
-    <script src="../dist/js/demo.js"></script>
+    <script src="../../dist/js/scripts.js"></script>
+    <script src="../../dist/js/custom.js"></script>
+    <script src="../../dist/js/demo.js"></script>
 </body>
 </html>
