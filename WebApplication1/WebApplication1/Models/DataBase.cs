@@ -156,7 +156,7 @@ namespace WebApplication1.Models
                 password = password,
                 type = this.type,
                 uid = uid,
-                name = "张三丰"
+                name = this.name
             };
             return ret;
 #endif

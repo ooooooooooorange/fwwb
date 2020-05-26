@@ -32,7 +32,7 @@ namespace WebApplication1.Models
         {
             //TODO 思考 如何登录，传递哪些信息
 
-            User ret = new User { uid = id, type = tp,
+            User ret = new User { uid = id, type = tp,name=id,
 #if !HASDB  //仅测试时将密码后传
                 password =pwd 
 #endif

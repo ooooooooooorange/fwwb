@@ -31,11 +31,24 @@ namespace WebApplication1.Controllers
         {
             Object obj = Session["Usr"];
             //网页信息
-            ViewBag.UsrName = ((Models.User)obj).name;//用户名
+            //if (obj != null)
+                ViewBag.UsrName = ((Models.User)obj).name;//用户名
+            //else ViewBag.UsrName = "张三丰";
             List<string> list = new List<string> { "吴亦凡","吴世勋","鹿晗","朴灿烈",
                 "张艺兴","艾琳","朴秀荣","林允儿","徐贤","郑秀晶",};
 
             ViewBag.RepDealNames = list;
+
+            ViewBag.RepDealData = "{ \"Name\": 吴亦凡, \"Time\": \"2019 / 1 / 2\"}," +
+                        "{ \"Name\": 吴世勋, \"Time\": \"2019/1/3\" }," +
+                        "{ \"Name\": 鹿晗, \"Time\": \"2019/1/5\"}," +
+                        "{ \"Name\": 朴灿烈, \"Time\": \"2019/1/8\" }," +
+                        "{ \"Name\": 张艺兴, \"Time\": \"2019/1/12\" }," +
+                        "{ \"Name\": 艾琳, \"Time\": \"2019/1/21\" }," +
+                        "{ \"Name\": 朴秀荣, \"Time\": \"2019/2/2\"}," +
+                        "{ \"Name\": 林允儿, \"Time\": \"2019/2/4\" }," +
+                        "{ \"Name\": 徐贤, \"Time\": \"2019/2/7\" }," +
+                        "{ \"Name\": 郑秀晶, \"Time\": \"2019/2/8\"},";
 
             return View();
         }

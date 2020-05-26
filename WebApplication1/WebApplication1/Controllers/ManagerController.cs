@@ -17,15 +17,24 @@ namespace WebApplication1.Controllers
         // GET: Manager
         public ActionResult Index(string name)
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         public ActionResult BoughtFinalDeal()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             //TODO:获取采购申请列表
             return View();
         }
         public ActionResult ScrapFinalDeal()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             //TODO:获取报废申请列表
             return View();
         }

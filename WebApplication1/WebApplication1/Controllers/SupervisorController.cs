@@ -17,18 +17,30 @@ namespace WebApplication1.Controllers
         // GET: Supervisor
         public ActionResult Index(string name)
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         public ActionResult BoughtDeal()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         public ActionResult ClassRevise()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         public ActionResult ScrapDeal()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         /// <summary>

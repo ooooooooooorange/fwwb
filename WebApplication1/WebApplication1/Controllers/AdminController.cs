@@ -16,10 +16,16 @@ namespace WebApplication1.Controllers
         // GET: Admin
         public ActionResult Index(string name)
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         public ActionResult UserPower()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             return View();
         }
         /// <summary>
@@ -28,6 +34,9 @@ namespace WebApplication1.Controllers
         /// <returns></returns>
         public ActionResult UserRevise()
         {
+            Object obj = Session["Usr"];
+            //网页信息
+            ViewBag.UsrName = ((Models.User)obj).name;//用户名
             //TODO:获取该用户下辖的所有用户信息
             return View();
         }

@@ -130,6 +130,117 @@
 
 
             <!--    <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 25%">
+        <thead>
+            <tr>
+                <th>申请人</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+
+
+            <tr>
+                <td id="applicator">@ViewBag.RepDealNames[0]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a  href="#" style=" color:red " onclick="ondate()">删除 </a>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>@ViewBag.RepDealNames[1]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>@ViewBag.RepDealNames[2]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>@ViewBag.RepDealNames[3]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>@ViewBag.RepDealNames[4]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>@ViewBag.RepDealNames[5]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>@ViewBag.RepDealNames[6]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>@ViewBag.RepDealNames[7]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>@ViewBag.RepDealNames[8]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>@ViewBag.RepDealNames[9]</td>
+                <td>
+                    <a style="color:#0087cb">查看</a>
+                    <a style="color:mediumseagreen">同意</a>
+                    <a style=" color:red">删除 </a>
+                </td>
+            </tr>
+
+
+
+        </tbody>
+    </table>-->
+            <table class="table table-striped" style="position: absolute;width: 50%;top:25%;left: 25%">
                 <thead>
                     <tr>
                         <th>申请人</th>
@@ -137,116 +248,30 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @{
+                        List<string> li = ViewBag.RepDealNames;
 
+                        for (int i = 0; i < li.Count; i++)
+                        {
+                            <tr>
+                                <td>@li[i]</td>
+                                <td>
+                                    <a style="color:#0087cb">查看</a>
+                                    <a style="color:mediumseagreen">同意</a>
+                                    <a style=" color:red">删除 </a>
+                                </td>
+                            </tr>
+                        }
 
-
-
-
-                    <tr>
-                        <td id="applicator">@ViewBag.RepDealNames[0]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a  href="#" style=" color:red " onclick="ondate()">删除 </a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[1]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[2]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[3]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[4]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[5]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[6]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[7]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[8]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>@ViewBag.RepDealNames[9]</td>
-                        <td>
-                            <a style="color:#0087cb">查看</a>
-                            <a style="color:mediumseagreen">同意</a>
-                            <a style=" color:red">删除 </a>
-                        </td>
-                    </tr>
-
-
-
+                    }
                 </tbody>
-            </table>-->
-
+            </table>
 
             <div style="background: #fff;width:50%;position:absolute;top:23%;left: 25%">
                 <div id="page">
                     <div class="btn-container">
                         <button class="layui-btn" onclick="ExportExcel();">导出Excel</button>
-                        
+
 
 
                     </div>
@@ -264,8 +289,6 @@
                 <p><span class="title">申请时间:</span><input type="text" id="Time" /></p>
 
             </div>
-
-
 
 
 
@@ -314,28 +337,8 @@
                     { "field": "Time", "title": "申请时间" },
 
                 ],
-
-               
-                "data":
-               [
-
-                        { "Name": "@ViewBag.RepDealNames[0]", "Time": "2019/1/2"},
-                        { "Name": "@ViewBag.RepDealNames[1]", "Time": "2019/1/3" },
-                        { "Name": "@ViewBag.RepDealNames[2]", "Time": "2019/1/5"},
-                        { "Name": "@ViewBag.RepDealNames[3]", "Time": "2019/1/8" },
-                        { "Name": "@ViewBag.RepDealNames[4]", "Time": "2019/1/12" },
-                        { "Name": "@ViewBag.RepDealNames[5]", "Time": "2019/1/21" },
-                        { "Name": "@ViewBag.RepDealNames[6]", "Time": "2019/2/2"},
-                        { "Name": "@ViewBag.RepDealNames[7]", "Time": "2019/2/4" },
-                        { "Name": "@ViewBag.RepDealNames[8]", "Time": "2019/2/7" },
-                        { "Name": "@ViewBag.RepDealNames[9]", "Time": "2019/2/8"},
-
-         
-
-                
-                ],
             });
-
+            
         })
 
         function uptr(btn, e) {
